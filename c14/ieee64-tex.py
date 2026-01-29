@@ -1,12 +1,17 @@
 """
 ieee64.py: Prints information about IEEE754 64-bit floating point values
 
+Copyright (c) Nicholas J. Radcliffe 2024
+MIT Licensed: see accompanying licence file LICENSE.
+
 USAGE: python ieee64.py [v1 [v2 ...]]
 
 Values v are strings that will be evaluated as eval(v) with math in scope.
 Can be decimals -1.5 or expressions like 1/3 or math.nan, math.inf etc.
 """
+
 import math
+import platform
 import struct  # https://docs.python.org/3.13/library/struct.html
 import sys
 
@@ -16,6 +21,7 @@ MANTISSA_MASK = eval(\textquotesingle{}0b\textquotesingle{} + \textquotesingle{}
 DIV = 1 << 52       # 52 mantissa bits
 EXP_OFFSET = 0x3ff  # 1023 = 2^\{10\} - 1 (11 mantissa bits)
 EXP_MAX = 0x7ff     # Used for NaNs and Infinities
+INFINITY = \textquotesingle{}inf\textquotesingle{} if platform.system() == \textquotesingle{}Windows\textquotesingle{} else \textquotesingle{}$\codeinfty$\textquotesingle{}
 
 class IEEE64f:
     """
@@ -41,7 +47,7 @@ class IEEE64f:
         self.exponent = self.exponent_raw - 1023  # exponent is offset
         if self.exponent_raw == 0x7ff:
             if self.mantissa_raw == 0:  # indicates infinity
-                self.out_val = f\textquotesingle{}\{self.sgn\}$\codeinfty$\textquotesingle{}
+                self.out_val = f\textquotesingle{}\{self.sgn\}\{INFINITY\}\textquotesingle{}
             else:
                 self.out_val = \textquotesingle{}NaN\textquotesingle{}  # qNaN vs. sNaN is machine dependent
         else:
@@ -64,11 +70,13 @@ a:   \{self.mantissa_raw:21d\}
 f.mantissa:1.19f\}
 
     s eeeeeeeeeee mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-    \{self.sign_bit\} \{self.exponent_raw:011b\} \{self.mantissa_raw:052b\}\eol\textquotesingle{}\textquotesingle{}\textquotesingle{}
+    \{self.sign_bit\} \{self.exponent_raw:011b\} \{self.mantissa_raw:052b\}
+\textquotesingle{}\textquotesingle{}\textquotesingle{}
 
     def __eq__(self, other):
         return all(self.__dict__[k] == other.__dict__[k]
                    for k in self.__dict__ if k != \textquotesingle{}expr\textquotesingle{})
+
 
 if __name__ == \textquotesingle{}__main__\textquotesingle{}:
     defaults = (

@@ -1,5 +1,30 @@
-# tdad-book-examples
-Examples from the TDDA book.
+# tdda-book-examples: Examples from the TDDA book.
+
+This repo contains all the example code and output from the book.
+
+**Test-Driven Data Analysis**
+Nicholas J. Radcliffe  
+CRC Press/Chapman and Hall/Taylor & Francis  
+2026
+
+
+# Organization
+
+The examples are organized by chapter in directories c2 to c17,
+for those chapters that include examples.
+
+
+# Test-Driven Document Development (TDDD) and Extra Files
+
+Many of the examples in the book were produced using test-driven document
+development (TDDD). This is described briefly in the book in section 9.8
+in Chapter 9, which can be read online
+[here](https://book.tdda.info/book/chapter9.html#testdriven-document-development-tddd).
+
+
+
+
+## Cross-Platform validations
 
 Currently just the IEEE754 float64 code in ieee64.py and associated tests.
 
