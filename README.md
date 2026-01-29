@@ -10,7 +10,7 @@ CRC Press/Chapman and Hall/Taylor & Francis
 
 # Organization
 
-The examples are organized by chapter in directories c2 to c17,
+The examples are organized by chapter in directories `c2` to `c17`,
 for those chapters that include examples.
 
 
@@ -22,7 +22,7 @@ This is described briefly in the book in section 9.8 in Chapter 9,
 which can be read online
 [here](https://book.tdda.info/book/chapter9.html#testdriven-document-development-tddd).
 
-The Makefile in this directory allows most of the TDDD tests to be run
+The `Makefile` in this directory allows most of the TDDD tests to be run
 and has some documentation at the top explaining a little more about
 how it all works.
 
@@ -31,7 +31,7 @@ how it all works.
 
 ## Cross-Platform validations
 
-Currently just the IEEE754 float64 code in ieee64.py and associated tests.
+Currently just the IEEE754 float64 code in `ieee64.py` and associated tests.
 
 Tested on:
   - MacBook Pro, 2.3 GHz 8-Core Intel Core i9, running MacOS Sonoma 14.7
