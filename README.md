@@ -16,10 +16,15 @@ for those chapters that include examples.
 
 # Test-Driven Document Development (TDDD) and Extra Files
 
-Many of the examples in the book were produced using test-driven document
-development (TDDD). This is described briefly in the book in section 9.8
-in Chapter 9, which can be read online
+Many of the examples in the book, particularly from the early chapters,
+were verified/product using test-driven document development (TDDD).
+This is described briefly in the book in section 9.8 in Chapter 9,
+which can be read online
 [here](https://book.tdda.info/book/chapter9.html#testdriven-document-development-tddd).
+
+The Makefile in this directory allows most of the TDDD tests to be run
+and has some documentation at the top explaining a little more about
+how it all works.
 
 
 
