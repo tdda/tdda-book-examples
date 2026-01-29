@@ -1,0 +1,6 @@
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandera/schema_statistics/pandas.py:214: UserWarning: You do not need more than one check out of equal_to (eq), greater_than (gt), less_than (lt), greater_than_or_equal_to (lt), less_than_or_equal_to (le), in_range (between).
+  warnings.warn(
+reformatted pandera_books_schema_expanded.py
+
+All done! ✨ 🍰 ✨
+1 file reformatted.

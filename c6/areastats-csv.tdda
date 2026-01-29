@@ -1,0 +1,76 @@
+{
+    "creation_metadata": {
+        "local_time": "2024-08-23T17:09:22",
+        "utc_time": "2024-08-23T16:09:22",
+        "creator": "TDDA 2.2.05",
+        "source": "us-area-stats.csv",
+        "host": "escher.local",
+        "user": "njr",
+        "dataset": "us-area-stats.csv",
+        "n_records": 3,
+        "n_selected": 3,
+        "tddafile": "areastats-csv.tdda"
+    },
+    "fields": {
+        "Kind": {
+            "type": "string",
+            "min_length": 1,
+            "max_length": 1,
+            "max_nulls": 0,
+            "no_duplicates": true,
+            "allowed_values": [
+                "D",
+                "S",
+                "T"
+            ]
+        },
+        "countName": {
+            "type": "int",
+            "min": 1,
+            "max": 50,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "minPopulation": {
+            "type": "int",
+            "min": 47329,
+            "max": 689545,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "maxPopulation": {
+            "type": "int",
+            "min": 689545,
+            "max": 39538223,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "sumPopulation": {
+            "type": "int",
+            "min": 689545,
+            "max": 330759736,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "countSeats": {
+            "type": "int",
+            "min": 1,
+            "max": 50,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "sumSeats": {
+            "type": "int",
+            "min": 1,
+            "max": 435,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        }
+    }
+}

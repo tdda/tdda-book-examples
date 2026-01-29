@@ -1,0 +1,19 @@
+FIELDS:
+
+no_tel: 1 failure  2 passes  type \cmark  max \xmark  max_nulls \cmark
+
+close_before_open: 2 failures  2 passes  type \cmark  max \xmark  sign \xmark  max_nulls \cmark
+
+SUMMARY:
+
+Records: 25,000
+Failing Records: 2 (0.01%)
+
+Constrained Fields: 4
+Failing Fields: 2 (50.00%)
+
+Constrained Values: 100,000
+Failing Values: 0 (0.00%)
+
+Constraints: 12
+Failing Constraints: 3 (25.00%)

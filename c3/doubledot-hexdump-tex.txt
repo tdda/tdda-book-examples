@@ -1,0 +1,7 @@
+\pui{grep 'Above +' doubledot.py | python byteseq.py | head -1}
+0071 q  0041 A  0042 B  0020 \visiblespace  003d =  0020 \visiblespace  0027 \textquotesingle{}  0071 q  0307 \highdot  0323 \lowdot  
+
+
+\pui{grep 'Below +' doubledot.py | python byteseq.py | head -1}
+0071 q  0042 B  0041 A  0020 \visiblespace  003d =  0020 \visiblespace  0027 \textquotesingle{}  0071 q  0323 \lowdot  0307 \highdot  
+

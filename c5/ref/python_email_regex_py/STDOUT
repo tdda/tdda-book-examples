@@ -1,0 +1,23 @@
+quality@tdda.info
+<re.Match object; span=(0, 17), match='quality@tdda.info'>
+('quality', 'tdda', 'info')
+
+More.Quality@longer.tdda.info
+<re.Match object; span=(0, 29), match='More.Quality@longer.tdda.info'>
+('More.Quality', 'longer.tdda', 'info')
+
+@tdda@tdda.info
+<re.Match object; span=(0, 15), match='@tdda@tdda.info'>
+('@tdda', 'tdda', 'info')
+
+@tddd@tddc@tddb.tdda.info
+<re.Match object; span=(0, 25), match='@tddd@tddc@tddb.tdda.info'>
+('@tddd@tddc', 'tddb.tdda', 'info')
+
+@tdda.info
+None
+
+m.group(0): 'njr@tdda.info'
+m.group(1): 'njr'
+m.group(2): 'tdda'
+m.group(3): 'info'

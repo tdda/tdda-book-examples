@@ -1,0 +1,11 @@
+test:
+\visibletab{}./count-occurrences.sh Alice alice.txt > actual-alice-alice.txt
+\visibletab{}diff actual-alice-alice.txt expected-alice-alice.txt
+\visibletab{}echo "PASS: count correct for Alice"
+\visibletab{}./count-occurrences.sh impossible alice.txt \textbackslash
+                > actual-impossible-alice.txt
+\visibletab{}diff actual-impossible-alice.txt expected-impossible-alice.txt
+\visibletab{}echo "PASS: count correct for impossible"
+
+clean:
+\visibletab{}rm actual-*.txt

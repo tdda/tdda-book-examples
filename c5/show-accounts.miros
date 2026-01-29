@@ -1,0 +1,10 @@
+cd ~/books/tdda/examples/
+load ~/books/tddadata/constraints_examples/accounts1k.csv
+format -commas account_number
+format -datefmt r-d *date
+format -colours
+ls -1
+ls -l
+show -mono account_number *date title *name 5
+show -mono account_number address1 city postcode *tel 5
+show -mono account_number email account_type overdraft_limit cash_card_number 5

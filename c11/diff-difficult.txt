@@ -1,0 +1,13 @@
+$ diff /var/.../actual-raw-alice.txt /Users/tdda/alice/alice.txt
+158c158
+< indeed were really difficult.
+---
+> indeed were really impossible.
+1348c1348
+< that it was quite difficult to say whether the blows hurt it or not.
+---
+> that it was quite impossible to say whether the blows hurt it or not.
+1436c1436
+< now!” The poor little thing sobbed again (or grunted, it was difficult
+---
+> now!” The poor little thing sobbed again (or grunted, it was impossible

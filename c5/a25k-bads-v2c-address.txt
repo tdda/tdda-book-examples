@@ -1,0 +1,9 @@
+Field: address1:                   Field: city
+  Constraint: max nulls: 0           Constraint: max_nulls: 0
+    Failures 1 / 25,000 (0.004%)       Failures: 3 / 25,000 (0.01%)
+      10429712: ∅                        10429712: ∅
+                                         11981710: ∅
+Field: postcode                          12142869: ∅
+  Constraint: max_nulls: 0
+    Failures: 1 / 25,000 (0.004%)
+      10429712: ∅

@@ -1,0 +1,28 @@
+$ python
+[startup message removed]
+>>> a = 1 << 60
+>>> b = a + 1
+>>> print(f'({a:,}; {b:,})')
+(1,152,921,504,606,846,976; 1,152,921,504,606,846,977)
+>>> print(a == b)
+False
+>>>
+>>> import pandas as pd
+>>> df = pd.DataFrame({'x': [a, b], 'y': [b, a]})  # n.b. reversed!
+>>> print(df.x == df.y)  # Compare int64 columns x and y
+0    False
+1    False
+dtype: bool
+>>>
+>>> df = pd.DataFrame({'x': [a, b, None], 'y': [b, a, None]})
+>>> print(df)
+              x             y
+0  1.152922e+18  1.152922e+18
+1  1.152922e+18  1.152922e+18
+2           NaN           NaN
+>>>
+>>> print(df.x == df.y)  # Compare float64 columns x and y
+0     True
+1     True
+2    False
+dtype: bool

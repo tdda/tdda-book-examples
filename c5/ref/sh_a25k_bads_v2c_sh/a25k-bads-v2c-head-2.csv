@@ -1,0 +1,17 @@
+account_number,open_date,close_date,title,forename,middle_name,surname,
+10132586,2006-05-03,,Mr,Lucas,Louis,Murray,
+
+address1,city,postcode,home_tel,mobile_tel,
+18 Hill Top View,Chigwell,IG8 7UW,0755 165 1344,0755 712 5296,
+
+email,account_type,overdraft_limit,cash_card_number,open_date_min_ok,
+ylucas9@googlemail.com,basic,19500,1202 8641 8550 4335,true,
+
+close_date_min_ok,home_tel_nonnull_ok,mobile_tel_nonnull_ok,
+,true,true,
+
+email_nodups_ok,account_type_nonnull_ok,account_type_values_ok,
+false,true,true,
+
+cash_card_number_nodups_ok,cash_card_number_rex_ok,n_failures
+true,true,1

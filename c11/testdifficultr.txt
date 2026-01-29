@@ -1,0 +1,19 @@
+\pui{python testdifficultr.py}
+3 lines are different, starting at line 158
+Expected file alice/alice.txt
+F
+======================================================================
+FAIL: testImpossibleDifficultAlice (__main__.TestBigTextDiff.testImpossibleDiff
+icultAlice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tdda/texeamples/estdifficultr.py", line 8, in testImpossibleDiff
+icultAlice
+    self.assertStringCorrect(actual,             # TDDA assertion method
+AssertionError: False is not true : 3 lines are different, starting at line 158
+Expected file alice/alice.txt
+Compare with:
+    diff /var/.../actual-raw-alice.txt /Users/tdda/examples/alice/alice.txt
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+FAILED (failures=1)

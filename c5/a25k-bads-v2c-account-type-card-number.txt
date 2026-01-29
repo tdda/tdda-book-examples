@@ -1,0 +1,22 @@
+Field: account_type
+  Constraint: max_nulls: 0
+    Failures: 2 / 25,000 (0.01%)
+      11981710: ∅
+      12142869: ∅
+
+  Constraint: allowed_values:
+      'basic', 'current', 'current+', 'offset', 'premium'
+    Failures: 3 / 25,000 (0.01%)
+      10429712: 'no longer valid'
+      11793707: 'no longer valid'
+      12610713: 'no longer valid'
+
+Field: cash_card_number
+  Constraint: no_duplicates: True
+    Failures: 2 / 25,000 (0.01%)
+      10406258: '1202 8678 1093 9985'
+      10500815: '1202 8678 1093 9985'
+
+  Constraint: rex: ^1202 [0-9]{4} [0-9]{4} [0-9]{4}$
+    Failures: 1 / 25,000 (0.004%)
+      12142869: '4003 6070 5668 5816'

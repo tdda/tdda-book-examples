@@ -1,0 +1,39 @@
+┏━━━━━━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━┓
+┃ ==        ┃ None ┃ np.nan ┃ pd.NaT ┃ numpy NaT ┃ IEEE nan ┃ pd.NA ┃
+┡━━━━━━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━┩
+│ None      │  ✔︎   │   ✗    │   ✗    │     ✗     │    ✗     │   ✗   │
+│ np.nan    │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │ <NA>  │
+│ pd.NaT    │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │ <NA>  │
+│ numpy NaT │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │ <NA>  │
+│ IEEE nan  │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │ <NA>  │
+│ pd.NA     │  ✗   │  <NA>  │  <NA>  │   <NA>    │   <NA>   │ <NA>  │
+└───────────┴──────┴────────┴────────┴───────────┴──────────┴───────┘
+┏━━━━━━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━┓
+┃ is        ┃ None ┃ np.nan ┃ pd.NaT ┃ numpy NaT ┃ IEEE nan ┃ pd.NA ┃
+┡━━━━━━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━┩
+│ None      │  ✔︎   │   ✗    │   ✗    │     ✗     │    ✗     │   ✗   │
+│ np.nan    │  ✗   │   ✔︎    │   ✗    │     ✗     │    ✗     │   ✗   │
+│ pd.NaT    │  ✗   │   ✗    │   ✔︎    │     ✗     │    ✗     │   ✗   │
+│ numpy NaT │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │   ✗   │
+│ IEEE nan  │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │   ✗   │
+│ pd.NA     │  ✗   │   ✗    │   ✗    │     ✗     │    ✗     │   ✔︎   │
+└───────────┴──────┴────────┴────────┴───────────┴──────────┴───────┘
+
+df1 (and df2):
+     i    f     o     I     S
+0  1.0  1.0     a     1     a
+1  NaN  NaN  None  <NA>  <NA>
+
+df1 == df1:
+       i      f      o     I     S
+0   True   True   True  True  True
+1  False  False  False  <NA>  <NA>
+
+df1 == df2:
+       i      f      o     I     S
+0   True   True   True  True  True
+1  False  False  False  <NA>  <NA>
+
+df1.equals(df1): True
+df1.equals(df2): True
+all(df1[c].equals(df2[c]) for c in df1): True

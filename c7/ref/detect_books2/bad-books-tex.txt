@@ -1,0 +1,28 @@
+TDDA FAILURES REPORT
+
+FIELDS:
+
+Field: Author
+  Constraint: no_duplicates: True
+    Failures: 2 / 3 (66.67%)
+      \textquotesingle{}1984\textquotesingle{}: \textquotesingle{}Orwell, George\textquotesingle{}
+      \textquotesingle{}Animal Farm\textquotesingle{}: \textquotesingle{}Orwell, George\textquotesingle{}
+
+Field: PublishDate
+  Constraint: max_nulls: 0
+    Failures: 1 / 3 (33.33%)
+      \textquotesingle{}2666\textquotesingle{}: \nullmark
+
+Field: Pages
+  Constraint: min: 146
+    Failures: 1 / 3 (33.33%)
+      \textquotesingle{}Animal Farm\textquotesingle{}: 92
+
+  Constraint: max: 545
+    Failures: 1 / 3 (33.33%)
+      \textquotesingle{}2666\textquotesingle{}: 912
+
+Field: Own
+  Constraint: max_nulls: 0
+    Failures: 1 / 3 (33.33%)
+      \textquotesingle{}2666\textquotesingle{}: \nullmark

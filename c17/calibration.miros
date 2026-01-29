@@ -1,0 +1,132 @@
+seed 12345676
+data 5000
+def P1 (random-normal-field .5 .3)
+def P2 (random-real-field .5 .2)
+def P3 (random-real-field .05 .95)
+def p (if (< .05 P1 .95) P1 (if (< .05 P2 .95) P2 P3))
+def a (if (< (random-real-field) p) 1 0)
+format +dps 1 p
+tag L="Predicted" p
+bin -loose .1 .2 ... .9 p
+set g x -G -L -aggnames (list "Mean Outcome" "") -point -hx -ps .2 -E -grid -t "Well Calibrated" -c 010101 mean a by p
+
+def p2 (+ 0.5 (* (- p 0.5) .6))
+def a2 (if (< (random-real-field) p2) 1 0)
+tag L="Predicted" p2
+
+set gD x -L -aggnames (list "Mean Outcome" "") -G -ym 0 -yM 1 -ny 10 -point -hx -ps .2 -E -grid -t "Degraded" -tlc -c 010101 mean a2 by p
+
+
+def p3 (+ 0.4 (* (- p 0.5) .6))
+def a3 (if (< (random-real-field) p3) 1 0)
+tag L="Predicted" p2
+
+set gDS x -L -aggnames (list "Mean Outcome" "") -G -ym 0 -yM 1 -ny 10 -point -hx -ps .2 -E -grid -t "Degraded and Shifted" -tlc -c 010101 mean a3 by p
+
+
+def p4 (* p .9)
+def a4 (if (< (random-real-field) p4) 1 0)
+tag L="Predicted" p4
+
+set gS x -L -aggnames (list "Mean Outcome" "") -G -ym 0 -yM 1 -ny 10 -point -hx -ps .2 -E -grid -t "Shifted" -tlc -c 010101 mean a4 by p
+
+set HW 260
+set HH 280
+set G graphic (* 2 HW) (* 2 HH)
+
+set dy (+ (- (. g height) HW) 60)
+
+global X 0
+global Y (eval HH)
+
+G.place $X $Y g
+
+
+(defun fx (x)
+    (+ X (* 2 x) 60))
+
+(defun fy ( y)
+    (+ Y (* 2 y) dy))
+
+# Place TL --- well calibrated
+
+G.line (fx 0) (fy 0) (fx 100) (fy 100) black .5 1 1
+G.annotate -c (fx 100) (fy -7) "1.0"
+G.annotate -c (fx 0) (fy -7) "0.0"
+G.line (fx 100) (fy 0) (fx 100) (fy -2) black 2
+
+# Place and annotate TR (gS) --- shifted)
+
+
+set X (eval HW)
+set Y (eval HH)
+G.place $X $Y gS
+
+
+set tl (. gS "tl" "coords")
+set y1 (* (. tl 1) 100)
+set y2 (* (. tl 3) 100)
+(eval gS)
+
+G.line (fx 0) (fy 0) (fx 100) (fy 100) black .5 1 1
+G.line (fx 0) (fy y1) (fx 100) (fy y2) black .5 1 1
+G.annotate -c (fx 100) (fy -7) "1.0"
+G.annotate -c (fx 0) (fy -7) "0.0"
+G.line (fx 100) (fy 0) (fx 100) (fy -2) black 2
+
+G.line (fx 90) (fy 90) (fx 90) (fy 80) black 2
+G.line (fx 50) (fy 50) (fx 50) (fy 45) black 2
+G.line (fx 48.5) (fy 48) (fx 50) (fy 45) (fx 51.5) (fy 48) black 2
+G.line (fx 88.5) (fy 83) (fx 90) (fy 80) (fx 91.5) (fy 83) black 2
+
+
+# Place and annotate BL (gD) --- degraded)
+
+
+set tl (. gD "tl" "coords")
+set y1 (* (. tl 1) 100)
+set y2 (* (. tl 3) 100)
+
+set X 0
+set Y 0
+
+G.place $X $Y gD
+
+G.line (fx 0) (fy 0) (fx 100) ( fy 100) black .5 1 1
+G.line (fx 0) (fy y1) (fx 100) (fy y2) black .5 1 1
+G.annotate -c (fx 100) (fy -7) "1.0"
+G.annotate -c (fx 0) (fy -7) "0.0"
+G.line (fx 100) (fy 0) (fx 100) (fy -2) black 2
+G.line (fx 90) (fy 90) (fx 90) (fy 73) black 2
+G.line (fx 10) (fy 10) (fx 10) (fy 26) black 2
+G.line (fx 8.5) (fy 23) (fx 10) (fy 26) (fx 11.5) (fy 23) black 2
+G.line (fx 88.5) (fy 76) (fx 90) (fy 73) (fx 91.5) (fy 76) black 2
+
+
+# Place and annotate BR (gDS) --- degraded and shifted)
+
+
+set X (eval HW)
+set Y 0
+G.place $X $Y gDS
+
+set tl (. gDS "tl" "coords")
+set y1 (* (. tl 1) 100)
+set y2 (* (. tl 3) 100)
+
+
+G.line (fx 0) (fy 0) (fx 100) (fy 100) black .5 1 1
+G.line (fx 0) (fy y1) (fx 100) (fy y2) black .5 1 1
+G.annotate -c (fx 100) (fy -7) "1.0"
+G.annotate -c (fx 0) (fy -7) "0.0"
+G.line (fx 100) (fy 0) (fx 100) (fy -2) black 2
+
+G.line (fx 90) (fy 90) (fx 90) (fy 66) black 2
+G.line (fx 10) (fy 10) (fx 10) (fy 16) black 2
+G.line (fx 8.5) (fy 13) (fx 10) (fy 16) (fx 11.5) (fy 13) black 2
+G.line (fx 88.5) (fy 69) (fx 90) (fy 66) (fx 91.5) (fy 69) black 2
+
+
+(eval G)
+G.write ../image/calibration.pdf
+G.write ../image/calibration-mono.pdf

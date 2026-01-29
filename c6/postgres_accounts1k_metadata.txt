@@ -1,0 +1,18 @@
+ table_name |   column_name    |          data_type          | udt_name
+------------+------------------+-----------------------------+-----------
+ accounts1k | account_number   | integer                     | int4
+ accounts1k | open_date        | timestamp without time zone | timestamp
+ accounts1k | close_date       | timestamp without time zone | timestamp
+ accounts1k | title            | text                        | text
+ accounts1k | forename         | text                        | text
+ accounts1k | middle_name      | text                        | text
+ accounts1k | surname          | text                        | text
+ accounts1k | address1         | text                        | text
+ accounts1k | city             | text                        | text
+ accounts1k | postcode         | text                        | text
+ accounts1k | home_tel         | text                        | text
+ accounts1k | mobile_tel       | text                        | text
+ accounts1k | email            | text                        | text
+ accounts1k | account_type     | text                        | text
+ accounts1k | overdraft_limit  | integer                     | int4
+ accounts1k | cash_card_number | text                        | text

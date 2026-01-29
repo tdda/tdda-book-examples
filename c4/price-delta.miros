@@ -1,0 +1,106 @@
+open 3numbers
+
+# Full Dataset Stats
+
+set pdMin min PriceDelta
+set pdMinMillions (string (/ pdMin
+                             1,000,000)
+                          dps: 0)
+set pdMinMillionPounds (string (/ pdMin
+                               1,000,000)
+                               dps: 0
+                               prefix: "£")
+set pdMax max PriceDelta
+set pdMaxMillions (string (/ pdMax
+                             1,000,000)
+                          dps: 1)
+set nRecords (n-records)
+set nNonNulls countnonnull PriceDelta
+set fullRange (- (max PriceDelta)
+                 (min PriceDelta))
+set pdRecordsMillions (string (// (round nRecords -6)
+                                  1,000,000))
+
+
+# Proportion between -90,000 and +90,000
+
+select (<= -90000
+           PriceDelta
+           90000)
+set n-90to90 (n-selected)
+set pdProp-90to90 (/ n-90to90
+                     nNonNulls)
+set pdpc-90to90 (string pdProp-90to90
+                        pc: t
+                        dps: 2)
+(fail-if (< pdProp-90to90
+             99.98%)
+         "FALSE CLAIM")
+
+
+set innerRange (* 90,000 2)
+set propRange (/ innerRange
+                 fullRange)
+set pdpcRange-90to90 "0.05%"
+(fail-if (> propRange
+            0.05%)
+         "FALSE CLAIM")
+
+
+# Proportion between -20 and +60
+
+select -r (<= -20
+              PriceDelta
+              60)
+set n-20to60 (n-selected)
+set pInnerRange (/ n-20to60
+                   nNonNulls)
+set pdpcInnerRange (string pInnerRange
+                           pc: t
+                           dps: 0)
+
+set nZeros countzero PriceDelta
+(fail-if (<= nZeros
+             6,000,000)
+         "FALSE CLAIM")
+
+set pdZerosMillions (string (round (/ nZeros
+                                      1,000,000))
+                             t)
+
+# Range -800 to +800
+
+select -r (<= -800
+              PriceDelta
+              800)
+
+set p-800to800 (/ (n-selected)
+                  nNonNulls)
+set pdpcIn-800to800 (string p-800to800
+                            pc: t
+                            dps: 1)
+(fail-if (< p-800to800
+            99.8%)
+         "FALSE CLAIM")
+
+set range800prop (/ (* 800 2)
+                    fullRange)
+
+set low800p 0.0005%  # claim in book
+(fail-if (>= range800prop
+             low800p)
+         "FALSE CLAIM")
+set pdpcIn-800to800 (string low800p
+                            pc: t
+                            dps: 4)
+
+set d (alist (list "pdMinMillions" pdMinMillions)
+             (list "pdMinMillionPounds" pdMinMillionPounds)
+             (list "pdMaxMillions" pdMaxMillions)
+             (list "pdpc-90to90" pdpc-90to90)
+             (list "pdpcInnerRange" pdpcInnerRange)
+             (list "pdpcIn-800to800" pdpcIn-800to800)
+             (list "pdpcRange-90to90" pdpcRange-90to90))
+
+(write-file "price-delta-values.json" (json-dumps d))
+(write-file "price-delta-defs.tex" (tex-dump-dict d))

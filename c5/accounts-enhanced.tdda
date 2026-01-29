@@ -1,0 +1,158 @@
+{
+    "creation_metadata": {
+        "local_time": "2024-08-20T11:34:38",
+        "utc_time": "2024-08-20T10:34:38",
+        "creator": "TDDA 2.2.05",
+        "host": "escher.local",
+        "user": "njr",
+        "n_records": 1000,
+        "n_selected": 1000
+    },
+    "fields": {
+        "account_number": {
+            "type": "int",
+            "min": 10000801,
+            "max": 12994290,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "open_date": {
+            "type": "date",
+            "min": "2002-10-02 00:00:00",
+            "max": "2018-11-17 00:00:00",
+            "max_nulls": 0
+        },
+        "close_date": {
+            "type": "date",
+            "min": "2003-08-12 00:00:00",
+            "max": "2018-11-14 00:00:00"
+        },
+        "title": {
+            "type": "string",
+            "min_length": 1,
+            "max_length": 4,
+            "max_nulls": 0,
+            "allowed_values": [
+                "Dr",
+                "M",
+                "Miss",
+                "Mr",
+                "Mrs",
+                "Ms",
+                "Prof"
+            ]
+        },
+        "forename": {
+            "type": "string",
+            "min_length": 3,
+            "max_length": 9,
+            "max_nulls": 0
+        },
+        "middle_name": {
+            "type": "string",
+            "min_length": 3,
+            "max_length": 9
+        },
+        "surname": {
+            "type": "string",
+            "min_length": 3,
+            "max_length": 10,
+            "max_nulls": 0
+        },
+        "address1": {
+            "type": "string",
+            "min_length": 7,
+            "max_length": 25,
+            "max_nulls": 0
+        },
+        "city": {
+            "type": "string",
+            "min_length": 4,
+            "max_length": 18,
+            "max_nulls": 0
+        },
+        "postcode": {
+            "type": "string",
+            "min_length": 7,
+            "max_length": 8,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "home_tel": {
+            "type": "string",
+            "min_length": 13,
+            "max_length": 13,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "mobile_tel": {
+            "type": "string",
+            "min_length": 13,
+            "max_length": 13,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "email": {
+            "type": "string",
+            "min_length": 14,
+            "max_length": 37,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "account_type": {
+            "type": "string",
+            "min_length": 5,
+            "max_length": 8,
+            "max_nulls": 0,
+            "allowed_values": [
+                "basic",
+                "current",
+                "current+",
+                "offset",
+                "premium"
+            ]
+        },
+        "overdraft_limit": {
+            "type": "int",
+            "min": 0,
+            "max": 20000,
+            "sign": "non-negative",
+            "max_nulls": 0
+        },
+        "cash_card_number": {
+            "type": "string",
+            "min_length": 19,
+            "max_length": 19,
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "no_tel": {
+            "type": "bool",
+            "min": false,
+            "max": false,
+            "sign": "zero",
+            "max_nulls": 0
+        },
+        "close_before_open": {
+            "type": "bool",
+            "min": false,
+            "max": false,
+            "sign": "zero",
+            "max_nulls": 0
+        },
+        "open_date_seconds_after_now": {
+            "type": "real",
+            "min": -690636878.868294,
+            "max": -181740878.868294,
+            "sign": "negative",
+            "max_nulls": 0
+        },
+        "close_date_seconds_after_now": {
+            "type": "real",
+            "min": -663507278.869122,
+            "max": -182000078.869122,
+            "sign": "negative"
+        }
+    }
+}

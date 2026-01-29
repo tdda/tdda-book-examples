@@ -1,0 +1,12 @@
+\begin{tabular}{lcccccc}
+ \aboveline
+\code{==}None & np.nan & pd.NaT & numpy NaT & IEEE nan & pd.NA
+\midline
+None       & \cmark︎ & \xmark & \xmark & \xmark & \xmark & \xmark \\
+np.nan     & \xmark & \xmark & \xmark & \xmark & \xmark & \NA    \\
+pd.NaT     & \xmark & \xmark & \xmark & \xmark & \xmark & \NA    \\
+numpy NaT  & \xmark & \xmark & \xmark & \xmark & \xmark & \NA    \\
+IEEE nan   & \xmark & \xmark & \xmark & \xmark & \xmark & \NA    \\
+pd.NA      & \xmark & \NA    & \NA    & \NA    & \NA    & \NA   
+\belowline
+\end{tabular}

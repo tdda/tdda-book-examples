@@ -1,0 +1,20 @@
+
+ascii
+    0123456789ABCDEF
+20:  !"#$%&'()*+,-./
+30: 0123456789:;<=>?
+40: @ABCDEFGHIJKLMNO
+50: PQRSTUVWXYZ[\]^_
+60: `abcdefghijklmno
+70: pqrstuvwxyz{|}~
+
+iso-8859-1
+    0123456789ABCDEF
+20:  !"#$%&'()*+,-./
+30: 0123456789:;<=>?
+40: @ABCDEFGHIJKLMNO
+50: PQRSTUVWXYZ[\]^_
+60: `abcdefghijklmno
+70: pqrstuvwxyz{|}~
+
+They are all the same from 20 to 7E!

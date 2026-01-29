@@ -1,0 +1,5 @@
+é: U+00E9        LATIN SMALL LETTER E WITH ACUTE 
+é: U+0065 U+0301 LATIN SMALL LETTER E; COMBINING ACUTE ACCENT 
+Normalization is idempotent
+nfc is NOT EQUAL to nfd
+"é" == "é":  False

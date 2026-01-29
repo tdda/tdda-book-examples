@@ -1,0 +1,13 @@
+{
+  "fields": {
+    "Title": {"type": "string", "min_length": 4, "max_length": 20,
+              "max_nulls": 0, "no_duplicates": true},
+    "Author": {"type": "string", "min_length": 14, "max_length": 19,
+               "max_nulls": 0, "no_duplicates": true},
+    "PublishDate": {"type": "date",  "min": "1861-07-01 00:00:00",
+                    "max": "1998-01-01 00:00:00", "max_nulls": 0},
+    "Pages": {"type": "int", "min": 146, "max": 545,
+              "sign": "positive", "max_nulls": 0, "no_duplicates": true},
+    "Own": {"type": "bool", "min": false, "max": true, "max_nulls": 0}
+    }
+}

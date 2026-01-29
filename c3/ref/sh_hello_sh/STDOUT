@@ -1,0 +1,2 @@
+>>> ' '.join(f'U+{ord(c):04X}' for c in'Hello')
+U+0048 U+0065 U+006C U+006C U+006F

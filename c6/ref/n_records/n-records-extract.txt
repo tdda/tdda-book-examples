@@ -1,0 +1,7 @@
+        "n_records": {
+            "type": "int",
+            "min": 56,
+            "max": 56,
+            "sign": "positive",
+            "max_nulls": 0
+        }

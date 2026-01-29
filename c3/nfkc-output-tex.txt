@@ -1,0 +1,72 @@
+Dashes   --—−
+\cmark HYPHEN-MINUS                -:  U+002D  NFKC: - U+002D  NFKD: - U+002D
+\xmark EN DASH                     -:  U+2013  NFKC: - U+2013  NFKD: - U+2013
+\xmark EM DASH                     —:  U+2014  NFKC: — U+2014  NFKD: — U+2014
+\xmark MINUS SIGN                  −:  U+2212  NFKC: − U+2212  NFKD: − U+2212
+
+Single Quotes \textquotesingle{}‘’ʼ`
+\cmark APOSTROPHE                  \textquotesingle{}:  U+0027  NFKC: \textquotesingle{} U+0027  NFKD: \textquotesingle{} U+0027
+\xmark LEFT SINGLE QUOTATION MARK  ‘:  U+2018  NFKC: ‘ U+2018  NFKD: ‘ U+2018
+\xmark RIGHT SINGLE QUOTATION MARK ’:  U+2019  NFKC: ’ U+2019  NFKD: ’ U+2019
+\xmark MODIFIER LETTER APOSTROPHE  ʼ:  U+02BC  NFKC: ʼ U+02BC  NFKD: ʼ U+02BC
+\xmark GRAVE ACCENT                `:  U+0060  NFKC: ` U+0060  NFKD: ` U+0060
+
+Double Quotes "＂“”
+\cmark QUOTATION MARK              ":  U+0022  NFKC: " U+0022  NFKD: " U+0022
+\cmark FULLWIDTH QUOTATION MARK    ＂:  U+FF02  NFKC: " U+0022  NFKD: " U+0022
+\xmark LEFT DOUBLE QUOTATION MARK  “:  U+201C  NFKC: “ U+201C  NFKD: “ U+201C
+\xmark RIGHT DOUBLE QUOTATION MARK ”:  U+201D  NFKC: ” U+201D  NFKD: ” U+201D
+
+Spaces         \visibletab{}
+\cmark SPACE                        :  U+0020  NFKC:   U+0020  NFKD:   U+0020
+\cmark NO-BREAK SPACE               :  U+00A0  NFKC:   U+0020  NFKD:   U+0020
+\cmark EN SPACE                     :  U+2002  NFKC:   U+0020  NFKD:   U+0020
+\cmark EM SPACE                     :  U+2003  NFKC:   U+0020  NFKD:   U+0020
+\cmark FIGURE SPACE                 :  U+2007  NFKC:   U+0020  NFKD:   U+0020
+\cmark PUNCTUATION SPACE            :  U+2008  NFKC:   U+0020  NFKD:   U+0020
+\xmark TAB                         \visibletab{}:  U+0009  NFKC: \visibletab{} U+0009  NFKD: \visibletab{} U+0009
+
+Ones     1¹₁①𝟙⑴⒈
+\cmark DIGIT ONE                   1:  U+0031  NFKC: 1 U+0031  NFKD: 1 U+0031
+\cmark SUPERSCRIPT ONE             ¹:  U+00B9  NFKC: 1 U+0031  NFKD: 1 U+0031
+\cmark SUBSCRIPT ONE               ₁:  U+2081  NFKC: 1 U+0031  NFKD: 1 U+0031
+\cmark CIRCLED DIGIT ONE           ①:  U+2460  NFKC: 1 U+0031  NFKD: 1 U+0031
+\cmark MATHEMATICAL DOUBLE-STRUCK DIGIT ONE 𝟙:  U+1D7D9  NFKC: 1 U+0031  NFKD: 1 U+00
+31
+\xmark PARENTHESIZED DIGIT ONE     ⑴:  U+2474  NFKC: (1) U+0028 U+0031 U+0029  NFKD: 
+(1) U+0028 U+0031 U+0029
+\xmark DIGIT ONE FULL STOP         ⒈:  U+2488  NFKC: 1. U+0031 U+002E  NFKD: 1. U+003
+1 U+002E
+
+Letter e e\'eè
+\cmark LATIN SMALL LETTER E        e:  U+0065  NFKC: e U+0065  NFKD: e U+0065
+\xmark LATIN SMALL LETTER E WITH ACUTE \'e:  U+00E9  NFKC: \'e U+00E9  NFKD: \'e U+0065 U+
+0301
+\xmark LATIN SMALL LETTER E WITH GRAVE è:  U+00E8  NFKC: è U+00E8  NFKD: è U+0065 U+
+0300
+
+Letter A AΑ
+\cmark LATIN CAPITAL LETTER A      A:  U+0041  NFKC: A U+0041  NFKD: A U+0041
+\xmark GREEK CAPITAL LETTER ALPHA  Α:  U+0391  NFKC: Α U+0391  NFKD: Α U+0391
+
+Omega    ΩΩ
+\cmark GREEK CAPITAL LETTER OMEGA  Ω:  U+03A9  NFKC: Ω U+03A9  NFKD: Ω U+03A9
+\cmark OHM SIGN                    Ω:  U+2126  NFKC: Ω U+03A9  NFKD: Ω U+03A9
+
+A Ring Accent ÅÅ
+\cmark LATIN CAPITAL LETTER A WITH RING ABOVE Å:  U+00C5  NFKC: Å U+00C5  NFKD: Å U+
+0041 U+030A
+\cmark ANGSTROM SIGN               Å:  U+212B  NFKC: Å U+00C5  NFKD: Å U+0041 U+030A
+
+
+Ligature ﬁ
+\cmark LATIN SMALL LIGATURE FI     ﬁ:  U+FB01  NFKC: fi U+0066 U+0069  NFKD: fi U+006
+6 U+0069
+
+Ellipsis …⋯︙⋱
+\cmark HORIZONTAL ELLIPSIS         …:  U+2026  NFKC: ... U+002E U+002E U+002E  NFKD: 
+... U+002E U+002E U+002E
+\xmark MIDLINE HORIZONTAL ELLIPSIS ⋯:  U+22EF  NFKC: ⋯ U+22EF  NFKD: ⋯ U+22EF
+\cmark PRESENTATION FORM FOR VERTICAL HORIZONTAL ELLIPSIS ︙:  U+FE19  NFKC: ... U+002
+E U+002E U+002E  NFKD: ... U+002E U+002E U+002E
+\xmark DOWN RIGHT DIAGONAL ELLIPSIS ⋱:  U+22F1  NFKC: ⋱ U+22F1  NFKD: ⋱ U+22F1

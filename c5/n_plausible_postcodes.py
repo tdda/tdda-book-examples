@@ -1,0 +1,35 @@
+import json
+
+from tdda.utils import dict_to_tex_macros
+
+re = r'^[A-Z]{1,2}[0-9]{1,2}[A-Z]? [0-9][A-Z]{2}$'
+
+def n_poss_postcodes_for_re():
+    """
+    Number of strings matching:
+      ^[A-Z]{1,2}[0-9]{1,2}[A-Z]? [0-9][A-Z]{2}$
+    """
+    n_postal_areas = 26 + 26 * 26  # 1 or two letters
+    n_postal_districts = 10 + 100  # Any one or two digit number
+                                   # 0 and 0x aren't used, but match the regex
+    n_subdistricts = 26 + 1        # Not all letters are used,
+                                   # and only for some London codes,
+                                   # but for our regex...
+                                   # The +1 is for ones not using a subdistrict
+
+    n_outcodes = n_postal_areas * n_postal_districts * n_subdistricts
+
+    n_incodes = 10 * 26 * 26       # Digit then two letters
+
+    n_postcodes = n_outcodes * n_incodes
+
+    return n_postcodes
+
+
+if __name__ == '__main__':
+    n = n_poss_postcodes_for_re()
+    print(f'Number of postcode-like strings matching\n{re}:\n{n:,}\n')
+    d = {'n_plausible_postcodes': f'{n:,}'}
+    with open('n-plausible-postcodes-results.json', 'w') as f:
+        json.dump(d, f)
+    dict_to_tex_macros(d, 'n-plausible-postcodes-defs.tex', verbose=True)

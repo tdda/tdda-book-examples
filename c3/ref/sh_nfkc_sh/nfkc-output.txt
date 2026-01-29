@@ -1,0 +1,63 @@
+Dashes   -–—−
+✔ HYPHEN-MINUS                -:  U+002D  NFKC: - U+002D  NFKD: - U+002D
+✘ EN DASH                     –:  U+2013  NFKC: – U+2013  NFKD: – U+2013
+✘ EM DASH                     —:  U+2014  NFKC: — U+2014  NFKD: — U+2014
+✘ MINUS SIGN                  −:  U+2212  NFKC: − U+2212  NFKD: − U+2212
+
+Single Quotes '‘’ʼ`
+✔ APOSTROPHE                  ':  U+0027  NFKC: ' U+0027  NFKD: ' U+0027
+✘ LEFT SINGLE QUOTATION MARK  ‘:  U+2018  NFKC: ‘ U+2018  NFKD: ‘ U+2018
+✘ RIGHT SINGLE QUOTATION MARK ’:  U+2019  NFKC: ’ U+2019  NFKD: ’ U+2019
+✘ MODIFIER LETTER APOSTROPHE  ʼ:  U+02BC  NFKC: ʼ U+02BC  NFKD: ʼ U+02BC
+✘ GRAVE ACCENT                `:  U+0060  NFKC: ` U+0060  NFKD: ` U+0060
+
+Double Quotes "＂“”
+✔ QUOTATION MARK              ":  U+0022  NFKC: " U+0022  NFKD: " U+0022
+✔ FULLWIDTH QUOTATION MARK    ＂:  U+FF02  NFKC: " U+0022  NFKD: " U+0022
+✘ LEFT DOUBLE QUOTATION MARK  “:  U+201C  NFKC: “ U+201C  NFKD: “ U+201C
+✘ RIGHT DOUBLE QUOTATION MARK ”:  U+201D  NFKC: ” U+201D  NFKD: ” U+201D
+
+Spaces         	
+✔ SPACE                        :  U+0020  NFKC:   U+0020  NFKD:   U+0020
+✔ NO-BREAK SPACE               :  U+00A0  NFKC:   U+0020  NFKD:   U+0020
+✔ EN SPACE                     :  U+2002  NFKC:   U+0020  NFKD:   U+0020
+✔ EM SPACE                     :  U+2003  NFKC:   U+0020  NFKD:   U+0020
+✔ FIGURE SPACE                 :  U+2007  NFKC:   U+0020  NFKD:   U+0020
+✔ PUNCTUATION SPACE            :  U+2008  NFKC:   U+0020  NFKD:   U+0020
+✘ TAB                         	:  U+0009  NFKC: 	 U+0009  NFKD: 	 U+0009
+
+Ones     1¹₁①𝟙⑴⒈
+✔ DIGIT ONE                   1:  U+0031  NFKC: 1 U+0031  NFKD: 1 U+0031
+✔ SUPERSCRIPT ONE             ¹:  U+00B9  NFKC: 1 U+0031  NFKD: 1 U+0031
+✔ SUBSCRIPT ONE               ₁:  U+2081  NFKC: 1 U+0031  NFKD: 1 U+0031
+✔ CIRCLED DIGIT ONE           ①:  U+2460  NFKC: 1 U+0031  NFKD: 1 U+0031
+✔ MATHEMATICAL DOUBLE-STRUCK DIGIT ONE 𝟙:  U+1D7D9  NFKC: 1 U+0031  NFKD: 1 U+0031
+✘ PARENTHESIZED DIGIT ONE     ⑴:  U+2474  NFKC: (1) U+0028 U+0031 U+0029  NFKD: (1) U+0028 U+0031 U+0029
+✘ DIGIT ONE FULL STOP         ⒈:  U+2488  NFKC: 1. U+0031 U+002E  NFKD: 1. U+0031 U+002E
+
+Letter e eéè
+✔ LATIN SMALL LETTER E        e:  U+0065  NFKC: e U+0065  NFKD: e U+0065
+✘ LATIN SMALL LETTER E WITH ACUTE é:  U+00E9  NFKC: é U+00E9  NFKD: é U+0065 U+0301
+✘ LATIN SMALL LETTER E WITH GRAVE è:  U+00E8  NFKC: è U+00E8  NFKD: è U+0065 U+0300
+
+Letter A AΑ
+✔ LATIN CAPITAL LETTER A      A:  U+0041  NFKC: A U+0041  NFKD: A U+0041
+✘ GREEK CAPITAL LETTER ALPHA  Α:  U+0391  NFKC: Α U+0391  NFKD: Α U+0391
+
+Omega    ΩΩ
+✔ GREEK CAPITAL LETTER OMEGA  Ω:  U+03A9  NFKC: Ω U+03A9  NFKD: Ω U+03A9
+✔ OHM SIGN                    Ω:  U+2126  NFKC: Ω U+03A9  NFKD: Ω U+03A9
+
+A Ring Accent ÅÅ
+✔ LATIN CAPITAL LETTER A WITH RING ABOVE Å:  U+00C5  NFKC: Å U+00C5  NFKD: Å U+0041 U+030A
+✔ ANGSTROM SIGN               Å:  U+212B  NFKC: Å U+00C5  NFKD: Å U+0041 U+030A
+
+Ligature ﬁ
+✔ LATIN SMALL LIGATURE FI     ﬁ:  U+FB01  NFKC: fi U+0066 U+0069  NFKD: fi U+0066 U+0069
+
+Ellipsis …⋯︙⋱
+✔ HORIZONTAL ELLIPSIS         …:  U+2026  NFKC: ... U+002E U+002E U+002E  NFKD: ... U+002E U+002E U+002E
+✘ MIDLINE HORIZONTAL ELLIPSIS ⋯:  U+22EF  NFKC: ⋯ U+22EF  NFKD: ⋯ U+22EF
+✔ PRESENTATION FORM FOR VERTICAL HORIZONTAL ELLIPSIS ︙:  U+FE19  NFKC: ... U+002E U+002E U+002E  NFKD: ... U+002E U+002E U+002E
+✘ DOWN RIGHT DIAGONAL ELLIPSIS ⋱:  U+22F1  NFKC: ⋱ U+22F1  NFKD: ⋱ U+22F1
+

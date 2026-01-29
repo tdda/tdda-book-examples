@@ -1,0 +1,12 @@
+open ch/BasicCompanyDataAsOneFile-2024-03-01
+sel PreviousName_10_CompanyName -
+set d (alist (list "chTotalCompanies" (string (n-records) t))
+             (list "chCompaniesTenPlusNames" (string (n-selected) t))
+             (list "chPropTenPlusNames"
+                    (string (/ (n-selected) (n-records))
+                    dps: 5
+                    pc: t)))
+
+(write-file "ch-stats.json" (json-dumps d))
+(write-file "ch-defs.tex" (tex-dump-dict d))
+

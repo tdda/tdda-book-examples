@@ -1,0 +1,29 @@
+{
+    "fields": {
+        "no_tel": {
+            "type": "bool",
+            "min": false,
+            "max": false,
+            "max_nulls": 0
+        },
+        "close_before_open": {
+            "type": "bool",
+            "min": false,
+            "max": false,
+            "max_nulls": 0
+        },
+        "open_secs_in_future": {
+            "type": "real",
+            "min": -722516466.790419,
+            "max": -213620466.790419,
+            "sign": "negative",
+            "max_nulls": 0
+        },
+        "close_secs_in_future": {
+            "type": "real",
+            "min": -695386866.790419,
+            "max": -213879666.790419,
+            "sign": "negative"
+        }
+    }
+}

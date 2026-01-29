@@ -1,0 +1,5 @@
+>>> empty = ''
+>>> type(empty)
+<class 'str'>
+>>> empty == None
+False

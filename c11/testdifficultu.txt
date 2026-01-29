@@ -1,0 +1,16 @@
+\pui{python testdifficultu.py}
+F
+======================================================================
+FAIL: testImpossibleDifficultAlice (__main__.TestBigTextDiff.testImpos
+sibleDifficultAlice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/tdda/examples/testdifficultu.py", line 13, in testImpos
+sibleDifficultAlice
+    self.assertEqual(actual, expected)
+AssertionError: "*** [7944 chars]ally difficult.\textbackslash{}n\textbackslash{}nThere seemed to be
+ no use i[140136 chars] ***" != "*** [7944 chars]ally impossible.\textbackslash{}n\textbackslash{}nT
+here seemed to be no use [140139 chars] ***"
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+FAILED (failures=1)

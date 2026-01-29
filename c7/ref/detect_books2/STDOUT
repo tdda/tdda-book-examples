@@ -1,0 +1,24 @@
+FIELDS:
+
+Author: 1 failure  4 passes  type ✓  min_length ✓  max_length ✓  max_nulls ✓  no_duplicates ✗
+
+PublishDate: 1 failure  3 passes  type ✓  min ✓  max ✓  max_nulls ✗
+
+Pages: 2 failures  4 passes  type ✓  min ✗  max ✗  sign ✓  max_nulls ✓  no_duplicates ✓
+
+Own: 1 failure  3 passes  type ✓  min ✓  max ✓  max_nulls ✗
+
+SUMMARY:
+
+Records: 3
+Failing Records: 3 (100.00%)
+
+Constrained Fields: 5
+Failing Fields: 4 (80.00%)
+
+Constrained Values: 15
+Failing Values: 6 (40.00%)
+
+Constraints: 24
+Failing Constraints: 5 (20.83%)
+Written bad-books-tex.txt.

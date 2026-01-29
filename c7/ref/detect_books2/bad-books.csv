@@ -1,0 +1,4 @@
+Title,Author,PublishDate,Pages,Own,Author_nodups_ok,PublishDate_nonnull_ok,Pages_min_ok,Pages_max_ok,Own_nonnull_ok,n_failures
+1984,"Orwell, George",1949-06-08,328,True,false,true,true,true,true,1
+Animal Farm,"Orwell, George",1945-08-17,92,True,false,true,false,true,true,2
+2666,"Bolaño, Roberto",,912,,true,false,true,false,false,3

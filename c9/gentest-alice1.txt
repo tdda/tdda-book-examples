@@ -1,0 +1,27 @@
+\pui{tdda gentest 'sh count-occurrences.sh Alice alice.txt' testalice1.py}
+
+Running command 'sh count-occurrences.sh Alice alice.txt'
+to generate output (run 1 of 2).
+Saved (non-empty) output to stdout to /Users/tdda/a/ref/alice1/STDOUT.
+Saved (empty) output to stderr to /Users/tdda/a/ref/alice1/STDERR.
+
+Running command 'sh count-occurrences.sh Alice alice.txt'
+to generate output (run 2 of 2).
+Saved (non-empty) output to stdout to /Users/tdda/a/ref/alice1/2/STDOUT.
+Saved (empty) output to stderr to /Users/tdda/a/ref/alice1/2/STDERR.
+
+Test script written as /Users/tdda/a/testalice1.py
+Command execution took: 0.017s
+
+SUMMARY:
+
+Directory to run in:        /Users/tdda/a
+Shell command:              sh count-occurrences.sh Alice alice.txt
+Test script generated:      /Users/tdda/a/testalice1.py
+Reference files: (none)
+Check stdout:               yes (was '     399\textbackslash{}n')
+Check stderr:               yes (was empty)
+Expected exit code:         0
+Clobbering permitted:       yes
+Number of times script ran: 2
+Number of tests written:    4

@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "no_tel": {
+            "type": "bool",
+            "max": false,
+            "max_nulls": 0
+        },
+        "close_before_open": {
+            "type": "bool",
+            "max": false,
+            "max_nulls": 0
+        },
+        "open_secs_in_future": {
+            "type": "real",
+            "sign": "negative",
+            "max_nulls": 0
+        },
+        "close_secs_in_future": {
+            "type": "real",
+            "sign": "negative"
+        }
+    }
+}

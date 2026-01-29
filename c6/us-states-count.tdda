@@ -1,0 +1,23 @@
+{
+    "creation_metadata": {
+        "local_time": "2025-08-24T11:12:23",
+        "utc_time": "2025-08-24T10:12:23+00:00",
+        "creator": "TDDA 2.2.15",
+        "source": "us-states-count.csv",
+        "host": "gardot.local",
+        "user": "njr",
+        "dataset": "us-states-count.csv",
+        "n_records": 1,
+        "n_selected": 1,
+        "tddafile": "us-states-count.tdda"
+    },
+    "fields": {
+        "n_records": {
+            "type": "int",
+            "min": 56,
+            "max": 56,
+            "sign": "positive",
+            "max_nulls": 0
+        }
+    }
+}

@@ -1,0 +1,62 @@
+TDDA FAILURES REPORT
+
+FIELDS:
+
+Field: open_date
+  Constraint: min: 2001-10-02
+    Failures: 4 / 25,000 (0.02%)
+      10429712: 1970-01-01
+      11359330: 2001-03-04
+      11793707: 1994-07-14
+      12142869: 1982-07-25
+
+Field: close_date
+  Constraint: min: 2001-10-02
+    Failures: 2 / 25,000 (0.01%)
+      11793707: 1990-03-09
+      12142869: 1995-05-06
+
+Field: home_tel
+  Constraint: max_nulls: 0
+    Failures: 2 / 25,000 (0.01%)
+      10429712: \nl
+      11501781: \nl
+
+Field: mobile_tel
+  Constraint: max_nulls: 0
+    Failures: 2 / 25,000 (0.01%)
+      10429712: \nl
+      11359330: \nl
+
+Field: email
+  Constraint: no_duplicates: True
+    Failures: 6 / 25,000 (0.02%)
+      10132586: \textquotesingle{}ylucas9@googlemail.com\textquotesingle{}
+      10363188: \textquotesingle{}ylucas9@googlemail.com\textquotesingle{}
+      11585649: \textquotesingle{}damber2@hotmail.com\textquotesingle{}
+      12472374: \textquotesingle{}damber2@hotmail.com\textquotesingle{}
+      12635783: \textquotesingle{}flily4@hotmail.com\textquotesingle{}
+      12753508: \textquotesingle{}flily4@hotmail.com\textquotesingle{}
+
+Field: account_type
+  Constraint: max_nulls: 0
+    Failures: 1 / 25,000 (0.004%)
+      11981710: \nl
+
+  Constraint: allowed_values:
+      \textquotesingle{}basic\textquotesingle{}, \textquotesingle{}current\textquotesingle{}, \textquotesingle{}current+\textquotesingle{}, \textquotesingle{}offset\textquotesingle{}, \textquotesingle{}premium\textquotesingle{}
+    Failures: 4 / 25,000 (0.02%)
+      10429712: \textquotesingle{}no longer valid\textquotesingle{}
+      11793707: \textquotesingle{}no longer valid\textquotesingle{}
+      12142869: \textquotesingle{}\textquotesingle{}
+      12610713: \textquotesingle{}no longer valid\textquotesingle{}
+
+Field: cash_card_number
+  Constraint: no_duplicates: True
+    Failures: 2 / 25,000 (0.01%)
+      10406258: \textquotesingle{}1202 8678 1093 9985\textquotesingle{}
+      10500815: \textquotesingle{}1202 8678 1093 9985\textquotesingle{}
+
+  Constraint: rex: ^1202 [0-9]\{4\} [0-9]\{4\} [0-9]\{4\}$
+    Failures: 1 / 25,000 (0.004%)
+      12142869: \textquotesingle{}4003 6070 5668 5816\textquotesingle{}

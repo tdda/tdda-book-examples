@@ -1,0 +1,6 @@
+{
+    "encoding": "utf-8", "sep": ",", "na_values": "", "header": 0,
+    "keep_default_na": false, "quotechar": "\"", "escapechar": null,
+    "date_format": {"open_date": "ISO8601", "close_date": "ISO8601"},
+    "parse_dates": ["open_date", "close_date"]
+}

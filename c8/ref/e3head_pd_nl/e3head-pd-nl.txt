@@ -1,0 +1,10 @@
+>>> import pandas
+>>> df = pandas.read_parquet('elements3-old.parquet',
+...                          dtype_backend='numpy_nullable')
+>>> df
+     Z        Name Symbol  Period  Group  AtomicWeight ApproxDiscovery
+0   18       Argon     Ar       3     18       39.9481      1894-01-01
+1   58      Cerium     Ce       6   <NA>      140.1161      1803-01-01
+2  118  Ununoctium    Uuo       7     18         294.0             NaT
+>>> [str(df[c].dtype) for c in df]
+['Int64', 'string', 'string', 'Int64', 'Int64', 'Float64', 'datetime64[us]']

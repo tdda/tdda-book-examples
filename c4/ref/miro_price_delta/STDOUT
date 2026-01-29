@@ -1,0 +1,149 @@
+This is Miro, version 3.3.29.
+Copyright © Stochastic Solutions Limited 2008-2025.
+Seed: 1713639360
+Logs started at 2025/09/05 09:17:34 host gardot.local.
+Logging to /Users/njr/miro/log/2025/09/05/session033.
+
+[1]> open 3numbers
+3numbers.miro: 14,109,988 records; 14,109,988 (100%) selected; 3 fields.
+[2]> # Full Dataset Stats
+[3]> set pdMin min PriceDelta
+-468550685.56
+[4]> set pdMinMillions (string (/ pdMin
+...                               1,000,000)
+...                            dps: 0)
+-469
+[5]> set pdMinMillionPounds (string (/ pdMin
+...                                 1,000,000)
+...                                 dps: 0
+...                                 prefix: "£")
+-£469
+[6]> set pdMax max PriceDelta
+2432595.87
+[7]> set pdMaxMillions (string (/ pdMax
+...                               1,000,000)
+...                            dps: 1)
+2.4
+[8]> set nRecords (n-records)
+14109988
+[9]> set nNonNulls countnonnull PriceDelta
+12172181
+[10]> set fullRange (- (max PriceDelta)
+...                    (min PriceDelta))
+470983281.43
+[11]> set pdRecordsMillions (string (// (round nRecords -6)
+...                                     1,000,000))
+14
+[12]> # Proportion between -90,000 and +90,000
+[13]> select (<= -90000
+...              PriceDelta
+...              90000)
+3numbers.miro: 14,109,988 records; 12,169,810 (86.25%) selected; 3 fields.
+Selection:
+(<= -90000 PriceDelta 90000) 
+[14]> set n-90to90 (n-selected)
+12169810
+[15]> set pdProp-90to90 (/ n-90to90
+...                        nNonNulls)
+0.9998052115721907
+[16]> set pdpc-90to90 (string pdProp-90to90
+...                           pc: t
+...                           dps: 2)
+99.98%
+[17]> (fail-if (< pdProp-90to90
+...                99.98%)
+...            "FALSE CLAIM")
+
+[18]> set innerRange (* 90,000 2)
+180000
+[19]> set propRange (/ innerRange
+...                    fullRange)
+0.00038217917089006595
+[20]> set pdpcRange-90to90 "0.05%"
+0.05%
+[21]> (fail-if (> propRange
+...               0.05%)
+...            "FALSE CLAIM")
+
+[22]> # Proportion between -20 and +60
+[23]> select -r (<= -20
+...                 PriceDelta
+...                 60)
+3numbers.miro: 14,109,988 records; 11,932,938 (84.57%) selected; 3 fields.
+Selection:
+(<= -20 PriceDelta 60) 
+[24]> set n-20to60 (n-selected)
+11932938
+[25]> set pInnerRange (/ n-20to60
+...                      nNonNulls)
+0.9803451000276778
+[26]> set pdpcInnerRange (string pInnerRange
+...                              pc: t
+...                              dps: 0)
+98%
+[27]> set nZeros countzero PriceDelta
+6439438
+[28]> (fail-if (<= nZeros
+...                6,000,000)
+...            "FALSE CLAIM")
+
+[29]> set pdZerosMillions (string (round (/ nZeros
+...                                         1,000,000))
+...                                t)
+6.00
+[30]> # Range -800 to +800
+[31]> select -r (<= -800
+...                 PriceDelta
+...                 800)
+3numbers.miro: 14,109,988 records; 12,149,683 (86.11%) selected; 3 fields.
+Selection:
+(<= -800 PriceDelta 800) 
+[32]> set p-800to800 (/ (n-selected)
+...                     nNonNulls)
+0.9981516870312723
+[33]> set pdpcIn-800to800 (string p-800to800
+...                               pc: t
+...                               dps: 1)
+99.8%
+[34]> (fail-if (< p-800to800
+...               99.8%)
+...            "FALSE CLAIM")
+
+[35]> set range800prop (/ (* 800 2)
+...                       fullRange)
+3.3971481856894753e-06
+[36]> set low800p 0.0005%  # claim in book
+5e-06
+[37]> (fail-if (>= range800prop
+...                low800p)
+...            "FALSE CLAIM")
+
+[38]> set pdpcIn-800to800 (string low800p
+...                               pc: t
+...                               dps: 4)
+0.0005%
+[39]> set d (alist (list "pdMinMillions" pdMinMillions)
+...                (list "pdMinMillionPounds" pdMinMillionPounds)
+...                (list "pdMaxMillions" pdMaxMillions)
+...                (list "pdpc-90to90" pdpc-90to90)
+...                (list "pdpcInnerRange" pdpcInnerRange)
+...                (list "pdpcIn-800to800" pdpcIn-800to800)
+...                (list "pdpcRange-90to90" pdpcRange-90to90))
+{
+    "pdMaxMillions"      : "2.4",
+    "pdMinMillionPounds" : "-£469",
+    "pdMinMillions"      : "-469",
+    "pdpc-90to90"        : "99.98%",
+    "pdpcIn-800to800"    : "0.0005%",
+    "pdpcInnerRange"     : "98%",
+    "pdpcRange-90to90"   : "0.05%"
+}
+[40]> (write-file "price-delta-values.json" (json-dumps d))
+
+[41]> (write-file "price-delta-defs.tex" (tex-dump-dict d))
+
+No problems identified during session.
+
+Job completed after a total of 8.9385 seconds.
+Logs closed at 2025/09/05 09:17:34 host gardot.local.
+Logs written to /Users/njr/miro/log/2025/09/05/session033.

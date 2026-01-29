@@ -1,0 +1,34 @@
+{
+  "SCHEMA": {
+    "SERIES_CONTAINS_NULLS": [
+      {
+        "schema": null,
+        "column": "PublishDate",
+        "check": "not_nullable",
+        "error": "non-nullable series 'PublishDate' contains null values:2   NaTName: PublishDate, dtype: datetime64[ns]"
+      },
+      {
+        "schema": null,
+        "column": "Own",
+        "check": "not_nullable",
+        "error": "non-nullable series 'Own' contains null values:2    <NA>Name: Own, dtype: boolean"
+      }
+    ]
+  },
+  "DATA": {
+    "DATAFRAME_CHECK": [
+      {
+        "schema": null,
+        "column": "Pages",
+        "check": "greater_than_or_equal_to(146.0)",
+        "error": "Column 'Pages' failed element-wise validator number 0: greater_than_or_equal_to(146.0) failure cases: 92"
+      },
+      {
+        "schema": null,
+        "column": "Pages",
+        "check": "less_than_or_equal_to(545.0)",
+        "error": "Column 'Pages' failed element-wise validator number 1: less_than_or_equal_to(545.0) failure cases: 912"
+      }
+    ]
+  }
+}
