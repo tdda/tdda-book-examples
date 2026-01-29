@@ -1,8 +1,8 @@
-# tdda-book-examples: Examples from the TDDA book.
+# tdda-book-examples: Examples from the TDDA Book
 
 This repo contains all the example code and output from the book.
 
-**Test-Driven Data Analysis**
+**Test-Driven Data Analysis**  
 Nicholas J. Radcliffe  
 CRC Press/Chapman and Hall/Taylor & Francis  
 2026
