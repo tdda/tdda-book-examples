@@ -16,7 +16,7 @@ from tdda.referencetest.gentest import exec_command
 from ignores import MIRO_IGNORE_LINES
 
 
-class Test_MIRO_PRICE_DE(ReferenceTestCase):
+class Test_MIRO_PRICE_DELTA(ReferenceTestCase):
     command = 'miro price-delta'
     cwd = os.path.abspath(os.path.dirname(__file__))
     refdir = os.path.join(cwd, 'ref', 'miro_price_delta')

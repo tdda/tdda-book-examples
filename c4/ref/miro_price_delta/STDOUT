@@ -1,8 +1,8 @@
-This is Miro, version 3.3.29.
+This is Miro, version 3.3.34.
 Copyright © Stochastic Solutions Limited 2008-2025.
-Seed: 1713639360
-Logs started at 2025/09/05 09:17:34 host gardot.local.
-Logging to /Users/njr/miro/log/2025/09/05/session033.
+Seed: 1753514015
+Logs started at 2026/03/12 11:08:27 host gardot.local.
+Logging to /Users/njr/miro/log/2026/03/12/session012.
 
 [1]> open 3numbers
 3numbers.miro: 14,109,988 records; 14,109,988 (100%) selected; 3 fields.
@@ -103,8 +103,8 @@ Selection:
 0.9981516870312723
 [33]> set pdpcIn-800to800 (string p-800to800
 ...                               pc: t
-...                               dps: 1)
-99.8%
+...                               dps: 2)
+99.82%
 [34]> (fail-if (< p-800to800
 ...               99.8%)
 ...            "FALSE CLAIM")
@@ -118,7 +118,7 @@ Selection:
 ...                low800p)
 ...            "FALSE CLAIM")
 
-[38]> set pdpcIn-800to800 (string low800p
+[38]> set pdpcRange-800to800 (string low800p
 ...                               pc: t
 ...                               dps: 4)
 0.0005%
@@ -127,16 +127,18 @@ Selection:
 ...                (list "pdMaxMillions" pdMaxMillions)
 ...                (list "pdpc-90to90" pdpc-90to90)
 ...                (list "pdpcInnerRange" pdpcInnerRange)
-...                (list "pdpcIn-800to800" pdpcIn-800to800)
+...                (list "pdpcpm800" pdpcIn-800to800)
+...                (list "pdpcRange-800to800" pdpcRange-800to800)
 ...                (list "pdpcRange-90to90" pdpcRange-90to90))
 {
     "pdMaxMillions"      : "2.4",
     "pdMinMillionPounds" : "-£469",
     "pdMinMillions"      : "-469",
     "pdpc-90to90"        : "99.98%",
-    "pdpcIn-800to800"    : "0.0005%",
     "pdpcInnerRange"     : "98%",
-    "pdpcRange-90to90"   : "0.05%"
+    "pdpcRange-800to800" : "0.0005%",
+    "pdpcRange-90to90"   : "0.05%",
+    "pdpcpm800"          : "99.82%"
 }
 [40]> (write-file "price-delta-values.json" (json-dumps d))
 
@@ -144,6 +146,6 @@ Selection:
 
 No problems identified during session.
 
-Job completed after a total of 8.9385 seconds.
-Logs closed at 2025/09/05 09:17:34 host gardot.local.
-Logs written to /Users/njr/miro/log/2025/09/05/session033.
+Job completed after a total of 9.0512 seconds.
+Logs closed at 2026/03/12 11:08:27 host gardot.local.
+Logs written to /Users/njr/miro/log/2026/03/12/session012.

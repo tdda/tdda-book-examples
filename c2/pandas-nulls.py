@@ -46,9 +46,7 @@ def show_table(comparison, tex=False):
     rprint(t)
 
 
-def show_table(comparison, tex=False):
-    if tex:
-        return show_tex_table(comparison)
+def show_tex_table(comparison):
     assert comparison in ('==', 'is')
     table = [
         r'\begin{tabular}{lcccccc}',
@@ -121,6 +119,6 @@ def df_eq(tex=False):
 
 if __name__ == '__main__':
     tex = len(sys.argv) > 1 and sys.argv[1] == 't'
-    show_table('==')
-    show_table('is')
+    show_table('==', tex=tex)
+    show_table('is', tex=tex)
     df_eq(tex)

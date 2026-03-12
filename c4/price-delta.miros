@@ -78,7 +78,7 @@ set p-800to800 (/ (n-selected)
                   nNonNulls)
 set pdpcIn-800to800 (string p-800to800
                             pc: t
-                            dps: 1)
+                            dps: 2)
 (fail-if (< p-800to800
             99.8%)
          "FALSE CLAIM")
@@ -90,7 +90,7 @@ set low800p 0.0005%  # claim in book
 (fail-if (>= range800prop
              low800p)
          "FALSE CLAIM")
-set pdpcIn-800to800 (string low800p
+set pdpcRange-800to800 (string low800p
                             pc: t
                             dps: 4)
 
@@ -99,7 +99,8 @@ set d (alist (list "pdMinMillions" pdMinMillions)
              (list "pdMaxMillions" pdMaxMillions)
              (list "pdpc-90to90" pdpc-90to90)
              (list "pdpcInnerRange" pdpcInnerRange)
-             (list "pdpcIn-800to800" pdpcIn-800to800)
+             (list "pdpcpm800" pdpcIn-800to800)
+             (list "pdpcRange-800to800" pdpcRange-800to800)
              (list "pdpcRange-90to90" pdpcRange-90to90))
 
 (write-file "price-delta-values.json" (json-dumps d))

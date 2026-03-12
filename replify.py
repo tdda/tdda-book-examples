@@ -1,9 +1,12 @@
-import json
 import sys
 
 def replify(inpath, outpath=None, deprint=True):
     """
-    Very simple script for making simple python scripts
+    Script that generates alternatve Python script that produces
+    the output its "natural" REPL equivalent would produce when
+    run.
+
+    Not fully general, but enough for the uses in the book.
     """
     if outpath is None:
         outpath = 'repl_' + inpath
@@ -47,3 +50,6 @@ if __name__ == '__main__':
         replify(*sys.argv[1:])
     else:
         print('USAGE: python replify.py script.py [outpath.py]')
+        print('Converts Python script to another whose output matches\n'
+              'what would be produced in the Python REPL.')
+
