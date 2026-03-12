@@ -1,0 +1,11 @@
+>>> import time
+>>> M, m = (1 << 31) - 1, -(1 << 31)
+>>> time.gmtime(M)
+time.struct_time(tm_year=2038, tm_mon=1, tm_mday=19, tm_hour=3, tm_min=14, tm_sec=7, tm_wday=1, tm_yday=19, tm_isdst=0)
+>>> f'{M:,}, {M:X}'
+2,147,483,647, 7FFFFFFF
+>>> time.gmtime(M)
+time.struct_time(tm_year=2038, tm_mon=1, tm_mday=19, tm_hour=3, tm_min=14, tm_sec=7, tm_wday=1, tm_yday=19, tm_isdst=0)
+>>> f'{m:,}, {m:X}'
+-2,147,483,648, -80000000
+>>> 
