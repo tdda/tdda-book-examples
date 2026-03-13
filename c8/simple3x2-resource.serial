@@ -1,0 +1,25 @@
+{
+    "format": "http://tdda.info/ns/tdda.serial",
+    "writer": "tdda.serial-3.0.00rc1",
+    "tdda.serial": {
+        "fields": [
+            {
+                "name": "n",
+                "fieldtype": "int"
+            },
+            {
+                "name": "f",
+                "fieldtype": "number"
+            },
+            {
+                "name": "s",
+                "fieldtype": "string"
+            }
+        ],
+        "path": "simple3x2.csv",
+        "encoding": "utf-8",
+        "header_row_count": 1,
+        "table_number": 0,
+        "n_resources": 1
+    }
+}
