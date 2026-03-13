@@ -1,0 +1,1 @@
+Book(title='Fugitive Pieces', author='Anne Michaels', publication_date=datetime.date(1996, 5, 11), own=True)

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/njr/books/tdda-book-examples/c8/pydantic_bookdata_json.py", line 7, in <module>
+    print(repr(Book.model_validate_json(json2)))
+               ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pydantic/main.py", line 746, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        json_data, strict=strict, context=context, by_alias=by_alias, by_name=by_name
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Book
+title
+  Input should be a valid string [type=string_type, input_value=2666, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type

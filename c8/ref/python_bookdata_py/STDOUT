@@ -1,0 +1,2 @@
+Book(title='1984', author='George Orwell', publication_date=datetime.date(1984, 6, 8), own=True)
+Book(title=1984, author='George Orwell', publication_date=None, own=False)
