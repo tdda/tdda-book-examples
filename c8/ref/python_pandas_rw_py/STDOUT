@@ -1,0 +1,26 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 16 columns):
+ #   Column            Non-Null Count  Dtype         
+---  ------            --------------  -----         
+ 0   account_number    1000 non-null   int64         
+ 1   open_date         1000 non-null   datetime64[ns]
+ 2   close_date        150 non-null    datetime64[ns]
+ 3   title             1000 non-null   object        
+ 4   forename          1000 non-null   object        
+ 5   middle_name       490 non-null    object        
+ 6   surname           1000 non-null   object        
+ 7   address1          1000 non-null   object        
+ 8   city              1000 non-null   object        
+ 9   postcode          1000 non-null   object        
+ 10  home_tel          1000 non-null   object        
+ 11  mobile_tel        1000 non-null   object        
+ 12  email             1000 non-null   object        
+ 13  account_type      1000 non-null   object        
+ 14  overdraft_limit   1000 non-null   int64         
+ 15  cash_card_number  1000 non-null   object        
+dtypes: datetime64[ns](2), int64(2), object(12)
+memory usage: 125.1+ KB
+None
+Round-tripped OK
+JSON worked OK

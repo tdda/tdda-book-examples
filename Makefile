@@ -66,11 +66,11 @@ c3/doubledot-tex.py: c3/doubledot.py
 	(cd c3; sh gentestgen-doubledot.sh)
 
 c6/detect-enhanced-output-tex.txt: c6/detect-enhanced-output.txt
-	python texify.py c6/detect-enhanced-output.txt
+	(cd c6; make)
 
 
 c7/bad-books-tex.txt: c7/bad-books.txt
-	python texify.py c7/bad-books.txt
+	(cd c7; make)
 
 c3/nfkc-tex.py: c3/nfkc.py c3/gentestgen-nfkc.sh
 	(cd c3; sh gentestgen-nfkc.sh)
