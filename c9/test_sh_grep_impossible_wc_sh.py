@@ -1,9 +1,9 @@
 """
-test_sh_wc_alice_sh.py: Automatically generated test code from tdda gentest.
+test_sh_grep_impossible_wc_sh.py: Automatically generated test code from tdda gentest.
 
 Generation command:
 
-tdda gentest 'sh wc-alice.sh' 'test_sh_wc_alice_sh.py' '.'
+tdda gentest 'sh grep-impossible-wc.sh' 'test_sh_grep_impossible_wc_sh.py' '.'
 """
 
 import os
@@ -14,10 +14,10 @@ from tdda.referencetest import ReferenceTestCase
 from tdda.referencetest.gentest import exec_command
 
 
-class Test_SH_WC_ALICE(ReferenceTestCase):
-    command = 'sh wc-alice.sh'
+class Test_SH_GREP_IMPOSSIBLE_WC(ReferenceTestCase):
+    command = 'sh grep-impossible-wc.sh'
     cwd = os.path.abspath(os.path.dirname(__file__))
-    refdir = os.path.join(cwd, 'ref', 'sh_wc_alice_sh')
+    refdir = os.path.join(cwd, 'ref', 'sh_grep_impossible_wc_sh')
 
 
     @classmethod

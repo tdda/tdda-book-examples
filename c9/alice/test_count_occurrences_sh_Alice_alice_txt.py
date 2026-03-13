@@ -1,9 +1,9 @@
 """
-test_sh_wc_alice_sh.py: Automatically generated test code from tdda gentest.
+test_count_occurrences_sh_Alice_alice_txt.py: Automatically generated test code from tdda gentest.
 
 Generation command:
 
-tdda gentest 'sh wc-alice.sh' 'test_sh_wc_alice_sh.py' '.'
+tdda gentest 'count-occurrences.sh Alice alice.txt' 'test_count_occurrences_sh_Alice_alice_txt.py' '.'
 """
 
 import os
@@ -14,10 +14,10 @@ from tdda.referencetest import ReferenceTestCase
 from tdda.referencetest.gentest import exec_command
 
 
-class Test_SH_WC_ALICE(ReferenceTestCase):
-    command = 'sh wc-alice.sh'
+class Test_COUNT_OCCURRENCES_SH_ALICE_ALICE_(ReferenceTestCase):
+    command = 'count-occurrences.sh Alice alice.txt'
     cwd = os.path.abspath(os.path.dirname(__file__))
-    refdir = os.path.join(cwd, 'ref', 'sh_wc_alice_sh')
+    refdir = os.path.join(cwd, 'ref', 'count_occurrences_sh_Alice_alice_txt')
 
 
     @classmethod

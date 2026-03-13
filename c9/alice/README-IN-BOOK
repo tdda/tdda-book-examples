@@ -1,0 +1,12 @@
+
+Reference tests for string counting.
+
+Input data file: ./alice.txt
+
+Test #1:
+grep -o Alice alice.txt | wc -l
+Expected result: 399
+
+Test #2:
+grep -o impossible alice.txt | wc -l
+Expected result: 3
