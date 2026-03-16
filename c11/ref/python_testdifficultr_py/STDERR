@@ -1,0 +1,20 @@
+F
+======================================================================
+FAIL: testImpossibleDifficultAlice (__main__.TestBigTextDiff.testImpossibleDifficultAlice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/njr/books/tdda-book-examples/c11/testdifficultr.py", line 8, in testImpossibleDifficultAlice
+    self.assertStringCorrect(actual,                # TDDA assertion method
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             'alice/alice.txt')     # just point to file
+                             ^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : 3 lines are different, starting at line 158
+Expected file alice/alice.txt
+Compare with:
+    diff /var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmp0nh3653n/actual-raw-alice.txt /Users/njr/books/tdda-book-examples/c11/alice/alice.txt
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)
