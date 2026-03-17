@@ -1,3 +1,4 @@
+$ python testdifficultu.py
 F
 ======================================================================
 FAIL: testImpossibleDifficultAlice (__main__.TestBigTextDiff.testImpossibleDifficultAlice)

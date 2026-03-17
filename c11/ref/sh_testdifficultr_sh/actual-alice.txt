@@ -1,6 +1,6 @@
 ***
 Compare raw with:
-    diff /var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmp0nh3653n/actual-raw-alice.txt /Users/njr/books/tdda-book-examples/c11/alice/alice.txt
+    diff /var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmpqfr565h2/actual-raw-alice.txt /Users/njr/books/tdda-book-examples/c11/alice/alice.txt
 ***
 
 *** START OF THE PROJECT GUTENBERG EBOOK ALICE'S ADVENTURES IN
@@ -160,7 +160,7 @@ poor Alice, “it would be of very little use without my shoulders. Oh,
 how I wish I could shut up like a telescope! I think I could, if I only
 knew how to begin.” For, you see, so many out-of-the-way things had
 happened lately, that Alice had begun to think that very few things
-indeed were really impossible.
+indeed were really difficult.
 
 There seemed to be no use in waiting by the little door, so she went
 back to the table, half hoping she might find another key on it, or at
@@ -1350,7 +1350,7 @@ fire, and at once set to work throwing everything within her reach at
 the Duchess and the baby—the fire-irons came first; then followed a
 shower of saucepans, plates, and dishes. The Duchess took no notice of
 them even when they hit her; and the baby was howling so much already,
-that it was quite impossible to say whether the blows hurt it or not.
+that it was quite difficult to say whether the blows hurt it or not.
 
 “Oh, _please_ mind what you’re doing!” cried Alice, jumping up and down
 in an agony of terror. “Oh, there goes his _precious_ nose!” as an
@@ -1438,7 +1438,7 @@ were any tears.
 
 No, there were no tears. “If you’re going to turn into a pig, my dear,”
 said Alice, seriously, “I’ll have nothing more to do with you. Mind
-now!” The poor little thing sobbed again (or grunted, it was impossible
+now!” The poor little thing sobbed again (or grunted, it was difficult
 to say which), and they went on for some while in silence.
 
 Alice was just beginning to think to herself, “Now, what am I to do

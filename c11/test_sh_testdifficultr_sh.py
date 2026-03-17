@@ -1,9 +1,9 @@
 """
-test_python_testdifficultr_py.py: Automatically generated test code from tdda gentest.
+test_sh_testdifficultr_sh.py: Automatically generated test code from tdda gentest.
 
 Generation command:
 
-tdda gentest --non-zero-exit 'python testdifficultr.py' 'test_python_testdifficultr_py.py' '.'
+tdda gentest 'sh testdifficultr.sh' 'test_sh_testdifficultr_sh.py' '.'
 """
 
 import os
@@ -14,11 +14,11 @@ from tdda.referencetest import ReferenceTestCase
 from tdda.referencetest.gentest import exec_command
 
 
-class Test_PYTHON_TESTDIFFICULTR(ReferenceTestCase):
-    command = 'python testdifficultr.py'
+class Test_SH_TESTDIFFICULTR(ReferenceTestCase):
+    command = 'sh testdifficultr.sh'
     cwd = os.path.abspath(os.path.dirname(__file__))
-    refdir = os.path.join(cwd, 'ref', 'python_testdifficultr_py')
-    orig_tmpdir = '/var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmp0nh3653n'
+    refdir = os.path.join(cwd, 'ref', 'sh_testdifficultr_sh')
+    orig_tmpdir = '/var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmpqfr565h2'
     if not os.environ.get('TMPDIR_SET_BY_GENTEST'):
         tmpdir = tempfile.mkdtemp()
         os.environ['TMPDIR'] = tmpdir
@@ -27,7 +27,9 @@ class Test_PYTHON_TESTDIFFICULTR(ReferenceTestCase):
         tmpdir = os.environ['TMPDIR']
     
     generated_files = [
-        os.path.join(tmpdir, 'actual-alice.txt'),
+        os.path.join(cwd, 'testdifficultr.txt'),
+    os.path.join(cwd, 'testdifficultr.txt.tex'),
+    os.path.join(tmpdir, 'actual-alice.txt'),
     os.path.join(tmpdir, 'actual-raw-alice.txt'),
     os.path.join(tmpdir, 'expected-alice.txt')
     ]
@@ -46,25 +48,43 @@ class Test_PYTHON_TESTDIFFICULTR(ReferenceTestCase):
         self.assertIsNone(self.exception)
 
     def test_exit_code(self):
-        self.assertEqual(self.exit_code, 1)
+        self.assertEqual(self.exit_code, 0)
 
     def test_stdout(self):
-        substrings = [
-            '/Users/njr/books/tdda-book-examples/c11',
-            self.orig_tmpdir,
-        ]
         self.assertStringCorrect(self.output,
-                                 os.path.join(self.refdir, 'STDOUT'),
-                                 ignore_substrings=substrings)
+                                 os.path.join(self.refdir, 'STDOUT'))
 
     def test_stderr(self):
+        self.assertStringCorrect(self.error,
+                                 os.path.join(self.refdir, 'STDERR'))
+
+    def test_testdifficultr_txt(self):
+        patterns = [
+            r'^Ran 1 test in 0\.[0-9]{3}[a-z]$',
+        ]
         substrings = [
             '/Users/njr/books/tdda-book-examples/c11',
             self.orig_tmpdir,
         ]
-        self.assertStringCorrect(self.error,
-                                 os.path.join(self.refdir, 'STDERR'),
-                                 ignore_substrings=substrings)
+        self.assertTextFileCorrect(os.path.join(self.cwd, 'testdifficultr.txt'),
+                                   os.path.join(self.refdir, 'testdifficultr.txt'),
+                                   ignore_patterns=patterns,
+                                   ignore_substrings=substrings,
+                                   encoding='ascii')
+
+    def test_testdifficultr_txt_tex(self):
+        patterns = [
+            r'^Ran 1 test in 0\.[0-9]{3}[a-z]$',
+        ]
+        substrings = [
+            '/Users/njr/books/tdda-book-examples/c11',
+            self.orig_tmpdir,
+        ]
+        self.assertTextFileCorrect(os.path.join(self.cwd, 'testdifficultr.txt.tex'),
+                                   os.path.join(self.refdir, 'testdifficultr.txt.tex'),
+                                   ignore_patterns=patterns,
+                                   ignore_substrings=substrings,
+                                   encoding='ascii')
 
     def test_actual_alice_txt(self):
         substrings = [

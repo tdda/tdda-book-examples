@@ -29,7 +29,18 @@ TRANS2 = str.maketrans({
     '–': r'-',
 })
 
-def texify(inpath, outpath=None, maxLen=80):
+
+def split(line, maxLen):
+    out = []
+    while len(line) > maxLen:
+        out.append(line[:maxLen])
+        line = line[maxLen:]
+    out.append(line)
+    return '\n'.join(out)
+
+
+def texify(inpath, outpath=None, maxLen=None):
+    maxLen = maxLen or 80
     base, ext = os.path.splitext(inpath)
     outpath = outpath or (base + '-tex' + ext)
     with open(inpath) as f:
@@ -41,11 +52,7 @@ def texify(inpath, outpath=None, maxLen=80):
                 lines = lines[:-1]
             outlines = []
             for line in lines:
-                if len(line) > maxLen:
-                    outlines.append(line[:maxLen] + '\n')
-                    outlines.append(line[maxLen:])
-                else:
-                    outlines.append(line)
+                outlines.append(split(line, maxLen))
             for line in outlines:
                 if line.startswith('$'):
                     fw.write('\\pui{' + line[2:-1] + '}\n')
@@ -68,5 +75,5 @@ def texify(inpath, outpath=None, maxLen=80):
 
 
 if __name__ == '__main__':
-    texify(*sys.argv[1:])
-
+    L = int(sys.argv[3]) if len(sys.argv) > 3 else None
+    texify(*sys.argv[1:3], maxLen=L)

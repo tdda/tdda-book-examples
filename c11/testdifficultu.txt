@@ -1,16 +1,15 @@
-\pui{python testdifficultu.py}
+$ python testdifficultu.py
 F
 ======================================================================
-FAIL: testImpossibleDifficultAlice (__main__.TestBigTextDiff.testImpos
-sibleDifficultAlice)
+FAIL: testImpossibleDifficultAlice (__main__.TestBigTextDiff.testImpossibleDifficultAlice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/Users/tdda/examples/testdifficultu.py", line 13, in testImpos
-sibleDifficultAlice
+  File "/Users/njr/books/tdda-book-examples/c11/testdifficultu.py", line 12, in testImpossibleDifficultAlice
     self.assertEqual(actual, expected)
-AssertionError: "*** [7944 chars]ally difficult.\textbackslash{}n\textbackslash{}nThere seemed to be
- no use i[140136 chars] ***" != "*** [7944 chars]ally impossible.\textbackslash{}n\textbackslash{}nT
-here seemed to be no use [140139 chars] ***"
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: "*** [7944 chars]ally difficult.\n\nThere seemed to be no use i[140136 chars] ***" != "*** [7944 chars]ally impossible.\n\nThere seemed to be no use [140139 chars] ***"
+
 ----------------------------------------------------------------------
-Ran 1 test in 0.004s
+Ran 1 test in 0.002s
+
 FAILED (failures=1)
