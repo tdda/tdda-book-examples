@@ -1,0 +1,22 @@
+$ python test_sales_analysis.py
+Written failing test workbook to 2026-03-17T162358-FAIL-ref-test-1.xlsx.
+F..
+======================================================================
+FAIL: test_broken_process_case_1 (__main__.TestExcel.test_broken_process_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/njr/books/tdda-book-examples/c11/excel-test/test_sales_analysis.py", line 87, in test_broken_process_case_1
+    self.sales_test('broken-sales-analysis.xlsx',
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    'test-case-1.xlsx', 'ref-test-1.xlsx')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/njr/books/tdda-book-examples/c11/excel-test/test_sales_analysis.py", line 69, in sales_test
+    self.assertEqual(failures, 0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 3.0 != 0
+
+----------------------------------------------------------------------
+Ran 3 tests in 23.339s
+
+FAILED (failures=1)
+
