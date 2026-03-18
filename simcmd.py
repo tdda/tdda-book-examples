@@ -5,7 +5,8 @@ from tdda.utils import find_free_name
 from tdda.referencetest.gentest import ExecuteCommand
 from texify import texify
 
-'''USAGE: python simcmd 'command to simulate' [outpath]
+'''USAGE: python simcmd 'command to simulate' [[outpath] width]
+   or: python simcmd ./f [[outpath] width] to read the command from file f
 
 Command will be run, combining stdout and stderr, writing
 result to file with a simulated command line at the top
@@ -35,7 +36,7 @@ def free_path(path, dir_):
     return path
 
 
-def simcmd(cmd, outpath=None):
+def simcmd(cmd, outpath=None, width=70):
     cwd = os.getcwd()
     if outpath is None:
         clean = ''.join((c if c.isalnum() else '_') for c in cmd)
@@ -48,12 +49,19 @@ def simcmd(cmd, outpath=None):
     with open(outpath, 'w') as f:
         f.write(f'{command_line}\n{r.out}{end}')
     print(f'Written {outpath}')
-    texify(outpath, texpath, 70)
+    texify(outpath, texpath, 80)
 
 
 if __name__ == '__main__':
-    if len(sys.argv) in (2, 3):
-        simcmd(*sys.argv[1:])
+    if len(sys.argv) in (2, 3, 4):
+        cmd = sys.argv[1]
+        if cmd.startswith('./'):
+            path = cmd[2:]
+            with open(path) as f:
+                cmd = f.read().strip()
+        outpath = None if len(sys.argv) == 2 else sys.argv[2]
+        width = 70 if len(sys.argv) < 4 else int(sys.argv[3])
+        simcmd(cmd, outpath, width)
     else:
         print(USAGE, file=sys.stderr)
         sys.exit(1)

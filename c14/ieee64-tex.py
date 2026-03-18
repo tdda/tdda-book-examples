@@ -58,8 +58,7 @@ class IEEE64f:
             self.out_val if type(self.out_val) is str
             else f\textquotesingle{}\{self.out_val:.30f\}\textquotesingle{}
         )
-        return f\textquotesingle{}\textquotesingle{}\textquotesingle{}
-    expr:   \{self.expr\}
+        return f\textquotesingle{}\textquotesingle{}\textquotesingle{}    expr:   \{self.expr\}
     in:     \{self.in_val:.30f\}
     out:    \{o\}
     hex:    \{self.bits:016X\}
