@@ -1,7 +1,8 @@
 import math
 import random
 import numpy as np
-
+import sys
+import time
 
 N = 1024
 RADIUS = 4
@@ -31,7 +32,7 @@ def experimentally_determine_luck(n):
     return pops
 
 
-def show_pops(pops):
+def show_pops(pops, seed):
     pop_rows = len(pops) // 4 + (1 if len(pops) % 4 > 0 else 0)
 
     n = len(pops[0])  # All alive in first pop
@@ -63,15 +64,20 @@ def show_pops(pops):
                        f'style="fill:black;stroke:black"/>')
 
     out.append('</svg>\n')
-    with open('generations.svg', 'w') as f:
+    out.append(f'<!-- Seed: {seed} -->')
+    outfile = f'generations-{seed}.svg'
+    with open(outfile, 'w') as f:
         f.write('\n'.join(out))
-    print('Written generations.svg.')
+    print(f'Written {outfile}.')
 
 
 if __name__ == '__main__':
+    seed = int(sys.argv[1]) if len(sys.argv) > 1 else int(time.time())
+    random.seed(seed)
     pops = experimentally_determine_luck(N)
     luckiest = pops[-1][0]
     n_rounds = len(pops) - 1
     print(f'Luckiest is {luckiest} ({n_rounds} elimination rounds)')
-    show_pops(pops)
+    print(f'Seed: {seed}')
+    show_pops(pops, seed)
 
