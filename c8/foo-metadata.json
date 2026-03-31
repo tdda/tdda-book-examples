@@ -1,0 +1,30 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "dc:conformsTo": "data-package",
+    "dc:creator": "tdda.serial-3.0.00rc1",
+    "tables": [
+        {
+            "columns": [
+                {
+                    "name": "n",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "f",
+                    "datatype": "float"
+                },
+                {
+                    "name": "s",
+                    "datatype": "string"
+                }
+            ]
+        }
+    ],
+    "dialect": {
+        "encoding": "utf-8",
+        "delimiter": ",",
+        "null": "",
+        "quoteChar": "\""
+    },
+    "url": "foo.csv"
+}
