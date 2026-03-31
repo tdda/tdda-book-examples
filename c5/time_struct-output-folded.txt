@@ -1,0 +1,9 @@
+>>> import time
+>>> time.time()
+1773327500.3854568
+>>> time.gmtime(time.time())
+time.struct_time(tm_year=2026, tm_mon=3, tm_mday=12, tm_hour=14, tm_min=58, 
+tm_sec=20, tm_wday=3, tm_yday=71, tm_isdst=0)
+>>> time.gmtime(0)
+time.struct_time(tm_year=1970, tm_mon=1, tm_mday=1, tm_hour=0, tm_min=0, 
+tm_sec=0, tm_wday=3, tm_yday=1, tm_isdst=0)

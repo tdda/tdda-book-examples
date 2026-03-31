@@ -11,6 +11,7 @@ all: clean \
      e3head-pd.txt \
      repl_e3head_pd.py \
      e3head-pd.txt \
+     repl_pd-serde.py \
      rest
 	echo Done
 
@@ -58,6 +59,8 @@ repl_e3head-pd-nl.txt:
 e3head-pd-nl.txt: e3head_pd_nl.py e3head-pd-nl.sh elements3-old.parquet
 	python test_e3head_pd_nl.py
 
+repl_pd-serde.py: pd-serde.py pd-serde.sh
+	sh pd-serde.sh
 
 .PHONY:
 rest:
