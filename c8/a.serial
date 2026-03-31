@@ -1,0 +1,11 @@
+{
+    "format": "http://tdda.info/ns/tdda.serial",
+    "writer": "tdda.serial-3.0.00rc1",
+    "tdda.serial": {
+        "encoding": "utf-8",
+        "delimiter": ",",
+        "quote_char": "\"",
+        "null_indicator": "",
+        "header_row_count": 1
+    }
+}
