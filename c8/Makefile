@@ -12,6 +12,8 @@ all: clean \
      repl_e3head_pd.py \
      e3head-pd.txt \
      repl_pd-serde.py \
+     repl_load_e3old_pl.py \
+     repl_load_e3old_pd.py \
      rest
 	echo Done
 
@@ -62,6 +64,12 @@ e3head-pd-nl.txt: e3head_pd_nl.py e3head-pd-nl.sh elements3-old.parquet
 repl_pd-serde.py: pd-serde.py pd-serde.sh
 	sh pd-serde.sh
 
+repl_load_e3old_pl.py: load_e3old_pl.py
+	sh load_e3old_pl.sh
+
+repl_load_e3old_pd.py: load_e3old_pd.py
+	sh load_e3old_pd.sh
+
 .PHONY:
 rest:
 	python test_e3head_pd_nl.py
@@ -86,3 +94,6 @@ rest:
 	python test_sh_simple3x2_to_pdr_serial_sh.py
 	python test_sh_tddadiff1_sh.py
 	python test_sh_pd_serde_sh.py
+	python test_sh_load_e3old_pl_sh.py
+	python test_sh_load_e3old_pd_sh.py
+
