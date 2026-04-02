@@ -49,10 +49,10 @@ class Test_METAGENTEST(ReferenceTestCase):
         # STDOUT from "gentest 'sh countoccurrences ...' ..."
         patterns = [
             '^Command execution took: [0-9].[0-9]{3}s$',
-            '^Directory to run in:    [.*]/c9/metagentest$',
-            'Test script generated:   [.*]/c9/metagentest/testalice1.py$',
+            '^.*/Users.*$'
         ]
         removals = [
+
         ]
         self.assertStringCorrect(self.output,
                                  os.path.join(self.refdir, 'STDOUT'),

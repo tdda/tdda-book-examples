@@ -1,0 +1,2 @@
++ wc alice.txt
+    3383   26549  151249 alice.txt

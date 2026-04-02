@@ -1,0 +1,2 @@
+\pui{./count-occurrences.sh Alice alice.txt}
+     399

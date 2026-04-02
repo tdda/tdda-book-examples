@@ -1,0 +1,6 @@
++ grep impossible alice.txt
++ wc -l
+       3
++ grep Alice alice.txt
++ wc -l
+     396

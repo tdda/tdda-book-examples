@@ -1,0 +1,4 @@
+\pui{grep impossible alice.txt | wc -l}
+       3
+\pui{grep Alice alice.txt | wc -l}
+     396

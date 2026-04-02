@@ -39,8 +39,8 @@ def split(line, maxLen):
     return '\n'.join(out)
 
 
-def texify(inpath, outpath=None, maxLen=None):
-    maxLen = maxLen or 80
+def texify(inpath, outpath=None, maxLen=None, repipe=None):
+    maxLen = int(maxLen) if maxLen else 80
     base, ext = os.path.splitext(inpath)
     outpath = outpath or (base + '-tex' + ext)
     with open(inpath) as f:
@@ -53,8 +53,19 @@ def texify(inpath, outpath=None, maxLen=None):
             outlines = []
             for line in lines:
                 outlines.append(split(line, maxLen))
+
+            if repipe:  # Re-join consectutive commands without output with |
+                i = 0
+                while i < len(outlines) - 1:
+                    L, M = outlines[i], outlines[i + 1]
+                    if L.startswith('+') and M.startswith('+'):
+                        outlines[i] = L.rstrip() + ' | ' + M[2:]
+                        outlines = outlines[:i+1] + outlines[i+2:]
+                    else:
+                        i += 1
+
             for line in outlines:
-                if line.startswith('$'):
+                if line.startswith('$') or line.startswith('+'):
                     fw.write('\\pui{' + line[2:-1] + '}\n')
                 else:
                     L = (uc.normalize('NFC', line)
@@ -75,5 +86,9 @@ def texify(inpath, outpath=None, maxLen=None):
 
 
 if __name__ == '__main__':
-    L = int(sys.argv[3]) if len(sys.argv) > 3 else None
-    texify(*sys.argv[1:3], maxLen=L)
+    if len(sys.argv) > 1:
+        texify(*sys.argv[1:])
+    else:
+        print('USAGE: python texify.py input [oupath [LEN [R]]]')
+        print('LEN is line length (default 80)')
+        print('R is for repipe (join consecutive + line with pipes)')

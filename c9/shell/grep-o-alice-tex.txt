@@ -1,0 +1,2 @@
+\pui{grep -o Alice alice.txt | wc -l}
+     399

@@ -1,0 +1,4 @@
+\pui{grep 'Alice.*Alice' alice.txt}
+Alice coming. “There’s _plenty_ of room!” said Alice indignantly, and
+“My name is Alice, so please your Majesty,” said Alice very politely;
+“Let’s go on with the game,” the Queen said to Alice; and Alice was too

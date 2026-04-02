@@ -1,0 +1,18 @@
+sh wc-alice.sh > wc-alice.txt 2>&1
+python ../../texify.py wc-alice.txt
+Written wc-alice-tex.txt.
+sh grep-impossible.sh > grep-impossible.txt 2>&1
+python ../../texify.py grep-impossible.txt
+Written grep-impossible-tex.txt.
+sh greps-wc-l.sh > greps-wc-l.txt 2>&1
+python ../../texify.py greps-wc-l.txt greps-wc-l-tex.txt 80 R
+Written greps-wc-l-tex.txt.
+sh grep-o-alice.sh > grep-o-alice.txt 2>&1
+python ../../texify.py grep-o-alice.txt grep-o-alice-tex.txt 80 R
+Written grep-o-alice-tex.txt.
+sh grep-alice-alice.sh > grep-alice-alice.txt 2>&1
+python ../../texify.py grep-alice-alice.txt
+Written grep-alice-alice-tex.txt.
+sh count-occurrences-alice.sh > count-occurrences-alice.txt 2>&1
+python ../../texify.py count-occurrences-alice.txt
+Written count-occurrences-alice-tex.txt.
