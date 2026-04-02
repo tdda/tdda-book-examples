@@ -1,0 +1,4 @@
+>>> A = json.loads(a)
+>>> B = json.loads(b)
+>>> f'{A} == {B}: {A == B}'
+{'one': 1, 'two': 2} == {'two': 2, 'one': 1}: True

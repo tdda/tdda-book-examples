@@ -1,0 +1,2 @@
+print('>>>', '''{"one": 1, "two": 2} == {'two': 2, 'one': 1}''')
+print({"one": 1, "two": 2} == {'two': 2, 'one': 1})

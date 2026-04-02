@@ -1,0 +1,12 @@
+print('>>>', '''import json''')
+import json
+print('>>>', '''a = json.dumps({'one': 1, 'two': 2})''')
+a = json.dumps({'one': 1, 'two': 2})
+print('>>>', '''a''')
+print(a)
+print('>>>', '''b = json.dumps({'two': 2, 'one': 1})''')
+b = json.dumps({'two': 2, 'one': 1})
+print('>>>', '''b''')
+print(b)
+print(">>>", """f'{repr(a)} == {repr(b)}: {a == b}'""")
+print(f'{repr(a)} == {repr(b)}: {a == b}')

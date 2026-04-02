@@ -1,0 +1,16 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "dc:conformsTo": "data-package",
+    "dc:creator": "tdda.serial-3.0.00rc1",
+    "tables": [
+        {}
+    ],
+    "dialect": {
+        "encoding": "utf-8",
+        "delimiter": ",",
+        "headerRowCount": 1,
+        "null": "",
+        "quoteChar": "\""
+    },
+    "url": "a.csv"
+}

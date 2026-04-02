@@ -1,0 +1,9 @@
+>>> import json
+>>> a = json.dumps({'one': 1, 'two': 2})
+>>> a
+{"one": 1, "two": 2}
+>>> b = json.dumps({'two': 2, 'one': 1})
+>>> b
+{"two": 2, "one": 1}
+>>> f'{repr(a)} == {repr(b)}: {a == b}'
+'{"one": 1, "two": 2}' == '{"two": 2, "one": 1}': False

@@ -1,0 +1,13 @@
+{
+    "format": "http://tdda.info/ns/tdda.serial",
+    "writer": "tdda.serial-3.0.00rc1",
+    "polars.read_csv": {
+        "separator": ",",
+        "quote_char": "\"",
+        "null_values": [
+            ""
+        ],
+        "encoding": "utf-8",
+        "schema": {}
+    }
+}

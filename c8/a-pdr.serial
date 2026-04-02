@@ -1,0 +1,12 @@
+{
+    "format": "http://tdda.info/ns/tdda.serial",
+    "writer": "tdda.serial-3.0.00rc1",
+    "pandas.read_csv": {
+        "sep": ",",
+        "encoding": "utf-8",
+        "quotechar": "\"",
+        "dtype": null,
+        "na_values": "",
+        "keep_default_na": false
+    }
+}

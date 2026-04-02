@@ -1,0 +1,6 @@
++ tdda serial foo-metadata.json foo.serial
++ tdda serial --to csvw a.serial a.json
++ tdda serial --to pd.r a.serial a-pdr.serial
++ tdda serial --to pl.r a.serial a-plr.serial
++ tdda serial --to pd.r a.serial pdread.py
++ tdda serial --to pd.r a.serial pdread.py

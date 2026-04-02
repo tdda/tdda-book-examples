@@ -25,13 +25,9 @@ def replify(inpath, outpath=None, deprint=True):
             else:
                 pline = line.rstrip()
             leader = '...' if cont else '>>>'
-            if "''" not in pline:
+            if not (pline.startswith("'") or pline.endswith("'")):
                 f.write(f"print('{leader}', '''{pline}''')\n")
-            elif '""' not in pline:
-                f.write(f'print("{leader}", """{pline}""")\n')
-            elif "'" not in pline:
-                f.write(f"print('{leader}', '''{pline}''')\n")
-            elif '"' not in pline:
+            elif not (pline.startswith('"') or pline.endswith('"')):
                 f.write(f'print("{leader}", """{pline}""")\n')
             else:
                 raise Exception(f'Problem writing: {pline}')

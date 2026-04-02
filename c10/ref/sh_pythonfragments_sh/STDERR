@@ -1,0 +1,11 @@
++ python ../replify.py 123.py
++ python ../replify.py dictorder.py
++ python ../replify.py jsondictorder.py
++ python ../replify.py jsondictorder2.py
++ python ../replify.py indentedjson.py
++ python repl_123.py
++ python repl_dictorder.py
++ python repl_jsondictorder.py
++ python repl_indentedjson.py
++ python repl_jsondictorder2.py
++ tail -4

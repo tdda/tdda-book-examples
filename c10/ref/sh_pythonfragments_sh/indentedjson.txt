@@ -1,0 +1,6 @@
+>>> import json
+>>> json.dumps({'two': 2, 'one': 1}, indent=4)
+{
+    "two": 2,
+    "one": 1
+}
