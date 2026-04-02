@@ -16,3 +16,9 @@ Written grep-alice-alice-tex.txt.
 sh count-occurrences-alice.sh > count-occurrences-alice.txt 2>&1
 python ../../texify.py count-occurrences-alice.txt
 Written count-occurrences-alice-tex.txt.
+sh testalice1-output.sh > testalice1-output.txt 2>&1
+python ../../texify.py testalice1-output.txt
+Written testalice1-output-tex.txt.
+sh testalice1--verbose-output.sh > testalice1--verbose-output.txt 2>&1
+python ../../texify.py testalice1--verbose-output.txt
+Written testalice1--verbose-output-tex.txt.

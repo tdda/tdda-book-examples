@@ -1,0 +1,10 @@
+\pui{python testalice1.py --verbose}
+test_exit_code (__main__.TestLICE1.test_exit_code) ... ok
+test_no_exception (__main__.TestLICE1.test_no_exception) ... ok
+test_stderr (__main__.TestLICE1.test_stderr) ... ok
+test_stdout (__main__.TestLICE1.test_stdout) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.014s
+
+OK

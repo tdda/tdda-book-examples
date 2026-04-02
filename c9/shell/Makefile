@@ -17,3 +17,8 @@ all:
 	sh count-occurrences-alice.sh > count-occurrences-alice.txt 2>&1
 	python ../../texify.py count-occurrences-alice.txt
 
+	sh testalice1-output.sh > testalice1-output.txt 2>&1
+	python ../../texify.py testalice1-output.txt
+
+	sh testalice1--verbose-output.sh > testalice1--verbose-output.txt 2>&1
+	python ../../texify.py testalice1--verbose-output.txt
