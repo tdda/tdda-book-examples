@@ -19,7 +19,6 @@
         "path": "simple3x2.csv",
         "encoding": "utf-8",
         "header_row_count": 1,
-        "table_number": 0,
         "n_resources": 1
     }
 }
