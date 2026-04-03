@@ -1,0 +1,19 @@
+.F.
+======================================================================
+FAIL: testDifferentPNGsWithSameImage (__main__.TestPNG.testDifferentPNGsWithSameImage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/njr/books/tdda/examples/c11/image/testpng.py", line 11, in testDifferentPNGsWithSameImage
+    self.assertBinaryFileCorrect('ref-graph.png',
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+                                 'same-pixels-as-ref-graph.png')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Compare with:
+    diff /Users/njr/books/tdda/examples/c11/image/ref-graph.png /Users/njr/books/tdda/examples/c11/image/same-pixels-as-ref-graph.png
+
+First difference at byte offset 35, actual length 12838, expected length 12791.
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+FAILED (failures=1)
