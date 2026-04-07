@@ -36,19 +36,25 @@ def free_path(path, dir_):
     return path
 
 
-def simcmd(cmd, outpath=None, width=70):
+def simcmd(cmd, outpath=None, width=70, mode='w'):
     cwd = os.getcwd()
     if outpath is None:
         clean = ''.join((c if c.isalnum() else '_') for c in cmd)
         outpath = free_path(f'{clean}.txt', cwd)
-    texpath = outpath + '.tex'
     command = cmd + f' 2>&1'
     command_line = PROMPT + cmd
     r = ExecuteCommand(command, cwd)
     end = '\n' if not r.out.endswith('\n') else ''
-    with open(outpath, 'w') as f:
+    with open(outpath, mode) as f:
         f.write(f'{command_line}\n{r.out}{end}')
-    print(f'Written {outpath}')
+    return outpath
+
+
+def texify_and_report(outpath):
+    texpath = outpath + '.tex'
+    print(f'Written {outpath}.')
+    if os.path.exists(texpath):
+        os.unlink(texpath)
     texify(outpath, texpath, 80)
 
 
@@ -61,7 +67,8 @@ if __name__ == '__main__':
                 cmd = f.read().strip()
         outpath = None if len(sys.argv) == 2 else sys.argv[2]
         width = 70 if len(sys.argv) < 4 else int(sys.argv[3])
-        simcmd(cmd, outpath, width)
+        outpath = simcmd(cmd, outpath, width)
+        texify_and_report(outpath)
     else:
         print(USAGE, file=sys.stderr)
         sys.exit(1)
