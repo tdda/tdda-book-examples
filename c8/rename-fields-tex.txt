@@ -1,3 +1,2 @@
 \pui{head -1 accounts1k.csv | sed s/_//g > accounts1k_clean.csv}
 \pui{tail +2 accounts1k.csv >> accounts1k_clean.csv}
-

@@ -12,5 +12,5 @@ def printable(c):
 
 i = 1
 while c := sys.stdin.read(1):  # Python 3.8+
-    print(f"\{ord(c):04x\} \{printable(c):3\}", end=\textquotesingle{}\textquotesingle{} if i % 10 else \textquotesingle{}\eol\textquotesingle{})
+    print(f"\{ord(c):04x\} \{printable(c):3\}", end=\textquotesingle{}\textquotesingle{} if i % 10 else \textquotesingle{}\eol\{\}\textquotesingle{})
     i += 1

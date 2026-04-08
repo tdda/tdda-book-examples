@@ -1,8 +1,8 @@
 {
     "creation_metadata": {
-        "local_time": "2025-08-24T11:12:24",
-        "utc_time": "2025-08-24T10:12:24+00:00",
-        "creator": "TDDA 2.2.15",
+        "local_time": "2026-04-08T11:29:07",
+        "utc_time": "2026-04-08T10:29:07+00:00",
+        "creator": "TDDA 3.0.00rc1",
         "host": "gardot.local",
         "user": "njr",
         "n_records": 1000,
@@ -142,15 +142,15 @@
         },
         "open_secs_in_future": {
             "type": "real",
-            "min": -722517144.69706,
-            "max": -213621144.69706,
+            "min": -742130947.386077,
+            "max": -233234947.386077,
             "sign": "negative",
             "max_nulls": 0
         },
         "close_secs_in_future": {
             "type": "real",
-            "min": -695387544.69706,
-            "max": -213880344.69706,
+            "min": -715001347.386077,
+            "max": -233494147.386077,
             "sign": "negative"
         }
     }

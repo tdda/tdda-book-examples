@@ -42,6 +42,7 @@ accounts1k_clean.csv: rename-fields.sh accounts1k.csv
 	python ../simcmd.py 'head -1 accounts1k.csv | sed s/_//g > accounts1k_clean.csv' c1.txt
 	python ../simcmd.py 'tail +2 accounts1k.csv >> accounts1k_clean.csv' c2.txt
 	cat c1.txt.tex c2.txt.tex > rename-fields-tex.txt
+	rm c[12].txt*
 
 pdr_syntax.py:
 pdw_syntax.py:

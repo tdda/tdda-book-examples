@@ -13,6 +13,7 @@ import tempfile
 from tdda.referencetest import ReferenceTestCase
 from tdda.referencetest.gentest import exec_command
 
+IGNORE_PATTERNS = ['Ran 1 test in (0.[0-9]+)s']
 
 class Test_SH_TESTDIFFICULTU(ReferenceTestCase):
     command = 'sh testdifficultu.sh'
@@ -42,7 +43,8 @@ class Test_SH_TESTDIFFICULTU(ReferenceTestCase):
 
     def test_stdout(self):
         self.assertStringCorrect(self.output,
-                                 os.path.join(self.refdir, 'STDOUT'))
+                                 os.path.join(self.refdir, 'STDOUT'),
+                                 ignore_patterns=IGNORE_PATTERNS)
 
     def test_stderr(self):
         self.assertStringCorrect(self.error,
@@ -55,6 +57,7 @@ class Test_SH_TESTDIFFICULTU(ReferenceTestCase):
         self.assertTextFileCorrect(os.path.join(self.cwd, 'testdifficultu.txt'),
                                    os.path.join(self.refdir, 'testdifficultu.txt'),
                                    ignore_substrings=substrings,
+                                   ignore_patterns=IGNORE_PATTERNS,
                                    encoding='ascii')
 
     def test_testdifficultu_txt_tex(self):
@@ -64,6 +67,7 @@ class Test_SH_TESTDIFFICULTU(ReferenceTestCase):
         self.assertTextFileCorrect(os.path.join(self.cwd, 'testdifficultu.txt.tex'),
                                    os.path.join(self.refdir, 'testdifficultu.txt.tex'),
                                    ignore_substrings=substrings,
+                                   ignore_patterns=IGNORE_PATTERNS,
                                    encoding='ascii')
 
 if __name__ == '__main__':

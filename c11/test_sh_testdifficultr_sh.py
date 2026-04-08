@@ -13,19 +13,20 @@ import tempfile
 from tdda.referencetest import ReferenceTestCase
 from tdda.referencetest.gentest import exec_command
 
+IGNORE_PATTERNS = ['Ran 1 test in (0.[0-9]+)s']
 
 class Test_SH_TESTDIFFICULTR(ReferenceTestCase):
     command = 'sh testdifficultr.sh'
     cwd = os.path.abspath(os.path.dirname(__file__))
     refdir = os.path.join(cwd, 'ref', 'sh_testdifficultr_sh')
-    orig_tmpdir = '/var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmpqfr565h2'
+    orig_tmpdir = '/var/folders/2y/72gfd2691h9gf2cy48xp8slh0000gn/T/tmpa3sfyidd'
     if not os.environ.get('TMPDIR_SET_BY_GENTEST'):
         tmpdir = tempfile.mkdtemp()
         os.environ['TMPDIR'] = tmpdir
         os.environ['TMPDIR_SET_BY_GENTEST'] = 'true'
     else:
         tmpdir = os.environ['TMPDIR']
-    
+
     generated_files = [
         os.path.join(cwd, 'testdifficultr.txt'),
     os.path.join(cwd, 'testdifficultr.txt.tex'),
@@ -59,31 +60,25 @@ class Test_SH_TESTDIFFICULTR(ReferenceTestCase):
                                  os.path.join(self.refdir, 'STDERR'))
 
     def test_testdifficultr_txt(self):
-        patterns = [
-            r'^Ran 1 test in 0\.[0-9]{3}[a-z]$',
-        ]
         substrings = [
             '/Users/njr/books/tdda-book-examples/c11',
             self.orig_tmpdir,
         ]
         self.assertTextFileCorrect(os.path.join(self.cwd, 'testdifficultr.txt'),
                                    os.path.join(self.refdir, 'testdifficultr.txt'),
-                                   ignore_patterns=patterns,
                                    ignore_substrings=substrings,
+                                   ignore_patterns=IGNORE_PATTERNS,
                                    encoding='ascii')
 
     def test_testdifficultr_txt_tex(self):
-        patterns = [
-            r'^Ran 1 test in 0\.[0-9]{3}[a-z]$',
-        ]
         substrings = [
             '/Users/njr/books/tdda-book-examples/c11',
             self.orig_tmpdir,
         ]
         self.assertTextFileCorrect(os.path.join(self.cwd, 'testdifficultr.txt.tex'),
                                    os.path.join(self.refdir, 'testdifficultr.txt.tex'),
-                                   ignore_patterns=patterns,
                                    ignore_substrings=substrings,
+                                   ignore_patterns=IGNORE_PATTERNS,
                                    encoding='ascii')
 
     def test_actual_alice_txt(self):

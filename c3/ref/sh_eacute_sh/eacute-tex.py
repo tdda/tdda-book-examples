@@ -4,7 +4,7 @@ def uc(s, joint=\textquotesingle{} \textquotesingle{}):
     return joint.join(f\textquotesingle{}U+\{ord(c):04X\}\textquotesingle{} for c in s)
 
 def names(s, multiline=False):
-    joint = \textquotesingle{}\eol   \textquotesingle{} if multiline else \textquotesingle{}; \textquotesingle{}
+    joint = \textquotesingle{}\eol\{\}   \textquotesingle{} if multiline else \textquotesingle{}; \textquotesingle{}
     return joint.join(unicodedata.name(c) for c in s)
 
 def print_detail(s, multiline=False):

@@ -14,15 +14,15 @@
         },
         "open_secs_in_future": {
             "type": "real",
-            "min": -722517144.69706,
-            "max": -213621144.69706,
+            "min": -742130947.386077,
+            "max": -233234947.386077,
             "sign": "negative",
             "max_nulls": 0
         },
         "close_secs_in_future": {
             "type": "real",
-            "min": -695387544.69706,
-            "max": -213880344.69706,
+            "min": -715001347.386077,
+            "max": -233494147.386077,
             "sign": "negative"
         }
     }

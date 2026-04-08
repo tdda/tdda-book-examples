@@ -69,7 +69,7 @@ def texify(inpath, outpath=None, maxLen=None, repipe=None):
                     fw.write('\\pui{' + line[2:-1] + '}\n')
                 else:
                     L = (uc.normalize('NFC', line)
-                           .replace(r'\n', r"\eol")
+                           .replace(r'\n', r"\eol{}")
                            .replace(QDD, r"\qBA")
                            .translate(TRANS1)
                            .replace(r'\u', r'\u{}')
