@@ -1,0 +1,2 @@
+>>> from tdda.serial import csv_to_polars
+>>> df2 = csv_to_polars('simple3x2-pdl.psv:')

@@ -76,17 +76,31 @@ repl_load_e3old_pd.py: load_e3old_pd.py
 
 .PHONY:
 rest:
-	python test_e3head_pd_nl.py
-	python test_e3head_pd.py
-	python test_e3head_pl.py
-	python test_gen_foo_serial.py
-	python test_pandas_rw_repls.py
 	python test_prt.py
+	python test_rename_fields.py
+	python test_pandas_rw_repls.py
+	# parquet:
+	python test_e3head_pl.py
+	python test_e3head_pd.py
+	python test_e3head_pd_nl.py
+	# csv:
+	python test_e3head_pl_csv.py
+        # CLI verify
+	python test_verify_book_sd_cli_1.py
+	python test_verify_book_sd_cli_2.py
+	python test_verify_book_sd_cli_3.py
+	python test_verify_book_sd_cli_3a.py
+	python test_verify_book_sd_cli_4.py
+	# CLI ddiff
+	python test_sh_tddadiff1_sh.py
+	#
+	python test_sh_pd_serde_sh.py
+        #
+	python test_gen_foo_serial.py
 	python test_python_bookdata_py.py
 	python test_python_pandas_rw_py.py
 	python test_python_pydantic_bookdata_json_py.py
 	python test_python_pydantic_bookdata_py.py
-	python test_rename_fields.py
 	python test_sh_csvw_validate_ddd_sh.py
 	python test_sh_fless_describe_json_sh.py
 	python test_sh_fless_describe_yaml_sh.py
@@ -96,12 +110,5 @@ rest:
 	python test_sh_gen_fless_3x2_resource_sh.py
 	python test_sh_gen_foo_serial_sh.py
 	python test_sh_simple3x2_to_pdr_serial_sh.py
-	python test_sh_tddadiff1_sh.py
-	python test_sh_pd_serde_sh.py
 	python test_sh_load_e3old_pl_sh.py
-	python test_sh_load_e3old_pd_sh.py
-	python test_verify_book_sd_cli_1.py
-	python test_verify_book_sd_cli_2.py
-	python test_verify_book_sd_cli_3.py
-	python test_verify_book_sd_cli_3a.py
-	python test_verify_book_sd_cli_4.py
+	python test_sh_load_e3old_pd_sh.py 

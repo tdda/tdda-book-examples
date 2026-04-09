@@ -1,0 +1,5 @@
+>>> pandas_to_csv(df2,'simple3x2-pdl.psv', auto_md_outpath=True, sep='|', 
+na_rep=';', encoding='latin-1')
+WriteInfo(path='simple3x2-pdl.psv', md_outpath='simple3x2-pdl.serial', 
+md_inpath=None, kw={'index': False, 'sep': '|', 'na_rep': ';', 'encoding': 
+'latin-1'})

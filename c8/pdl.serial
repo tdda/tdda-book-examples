@@ -1,0 +1,5 @@
+{
+    "tdda.serial": {
+        "encoding": "latin-1", "delimiter": "|", "null_indicator": "."
+    }
+}
