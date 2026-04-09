@@ -100,4 +100,8 @@ rest:
 	python test_sh_pd_serde_sh.py
 	python test_sh_load_e3old_pl_sh.py
 	python test_sh_load_e3old_pd_sh.py
-
+	python test_verify_book_sd_cli_1.py
+	python test_verify_book_sd_cli_2.py
+	python test_verify_book_sd_cli_3.py
+	python test_verify_book_sd_cli_3a.py
+	python test_verify_book_sd_cli_4.py

@@ -1,0 +1,29 @@
+FIELDS:
+
+Z: 0 failures  6 passes  type ✓  min ✓  max ✓  sign ✓  max_nulls ✓  no_duplicates ✓
+
+Name: 0 failures  5 passes  type ✓  min_length ✓  max_length ✓  max_nulls ✓  no_duplicates ✓
+
+Symbol: 0 failures  5 passes  type ✓  min_length ✓  max_length ✓  max_nulls ✓  no_duplicates ✓
+
+Period: 0 failures  5 passes  type ✓  min ✓  max ✓  sign ✓  max_nulls ✓
+
+Group: 4 failures  0 passes  type ✗  min ✗  max ✗  sign ✗
+
+AtomicWeight: 0 failures  5 passes  type ✓  min ✓  max ✓  sign ✓  max_nulls ✓
+
+DATASET:
+
+Extra (disallowed) fields: ApproxDiscovery
+Missing (required) fields: ChemicalSeries, Etymology, RelativeAtomicMass, MeltingPointC, MeltingPointKelvin, BoilingPointC, BoilingPointF, Density, Description, Colour
+
+SUMMARY:
+
+Constrained Fields: 6
+Failing Fields: 1 (16.67%)
+
+Constraints: 32
+Failing Constraints: 6 (18.75%)
+
+Extra (disallowed) fields: 1
+Missing (required) fields: 10

@@ -19,3 +19,4 @@ verify:
 detect:
 	python test_detect_book_ex17.py
 
+

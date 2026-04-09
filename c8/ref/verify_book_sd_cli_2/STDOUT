@@ -1,0 +1,21 @@
+FIELDS:
+
+Z: 0 failures  6 passes  type ✓  min ✓  max ✓  sign ✓  max_nulls ✓  no_duplicates ✓
+
+Name: 0 failures  5 passes  type ✓  min_length ✓  max_length ✓  max_nulls ✓  no_duplicates ✓
+
+Symbol: 0 failures  5 passes  type ✓  min_length ✓  max_length ✓  max_nulls ✓  no_duplicates ✓
+
+Period: 0 failures  5 passes  type ✓  min ✓  max ✓  sign ✓  max_nulls ✓
+
+Group: 4 failures  0 passes  type ✗  min ✗  max ✗  sign ✗
+
+AtomicWeight: 0 failures  5 passes  type ✓  min ✓  max ✓  sign ✓  max_nulls ✓
+
+SUMMARY:
+
+Constrained Fields: 6
+Failing Fields: 1 (16.67%)
+
+Constraints: 30
+Failing Constraints: 4 (13.33%)
