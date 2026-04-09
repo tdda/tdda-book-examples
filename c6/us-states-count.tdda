@@ -1,7 +1,7 @@
 {
     "creation_metadata": {
-        "local_time": "2026-04-09T09:53:50",
-        "utc_time": "2026-04-09T08:53:50+00:00",
+        "local_time": "2026-04-09T13:37:30",
+        "utc_time": "2026-04-09T12:37:30+00:00",
         "creator": "TDDA 3.0.00rc1",
         "source": "us-states-count.csv",
         "host": "gardot.local",
@@ -19,11 +19,5 @@
             "sign": "positive",
             "max_nulls": 0
         }
-    },
-    "dataset": {
-        "allowed_fields": [],
-        "required_fields": [
-            "*"
-        ]
     }
 }

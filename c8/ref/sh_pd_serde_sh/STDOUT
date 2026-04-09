@@ -6,4 +6,5 @@
 0  1  1.5  à
 1  2  NaN  é
 >>> pandas_to_csv(df,'simple3x2.csv', md_outpath='simple3x2.serial')
-WriteInfo(path='simple3x2.csv', md_outpath='simple3x2.serial', md_inpath=None, kw={'index': False})
+WriteInfo(path='simple3x2.csv', md_outpath='simple3x2.serial', md_inpath=None, 
+kw={'index': False})

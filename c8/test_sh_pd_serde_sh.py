@@ -14,7 +14,7 @@ from tdda.referencetest import ReferenceTestCase
 from tdda.referencetest.gentest import exec_command
 
 
-class Test_SH_PD_SERDE(ReferenceTestCase):
+class Test_SH_PD_SERDE_SH(ReferenceTestCase):
     command = 'sh pd-serde.sh'
     cwd = os.path.abspath(os.path.dirname(__file__))
     refdir = os.path.join(cwd, 'ref', 'sh_pd_serde_sh')

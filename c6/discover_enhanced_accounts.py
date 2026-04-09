@@ -7,7 +7,8 @@ from enhance_accounts import enhance_accounts
 def discover_enhanced(inpath, outpath):
     df = pd.read_parquet(inpath)
     enhance_accounts(df)
-    constraints = discover(df, verbose=False)
+    constraints = discover(df, allowed_fields=False, required_fields=False,
+                           verbose=False)
     with open(outpath, 'w') as f:
         f.write(constraints.to_json())
     print(f'Written {outpath}.')
