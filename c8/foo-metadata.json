@@ -4,27 +4,29 @@
     "dc:creator": "tdda.serial-3.0.00rc1",
     "tables": [
         {
-            "columns": [
-                {
-                    "name": "n",
-                    "datatype": "integer"
-                },
-                {
-                    "name": "f",
-                    "datatype": "float"
-                },
-                {
-                    "name": "s",
-                    "datatype": "string"
-                }
-            ]
+            "tableSchema": {
+                "columns": [
+                    {
+                        "name": "n",
+                        "datatype": "integer"
+                    },
+                    {
+                        "name": "f",
+                        "datatype": "float"
+                    },
+                    {
+                        "name": "s",
+                        "datatype": "string"
+                    }
+                ]
+            },
+            "url": "foo.csv"
         }
     ],
     "dialect": {
         "encoding": "utf-8",
         "delimiter": ",",
-        "null": "",
         "quoteChar": "\""
     },
-    "url": "foo.csv"
+    "null": ""
 }
