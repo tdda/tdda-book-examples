@@ -10,6 +10,6 @@ Traceback (most recent call last):
 AssertionError: "*** [7944 chars]ally difficult.\n\nThere seemed to be no use i[140136 chars] ***" != "*** [7944 chars]ally impossible.\n\nThere seemed to be no use [140139 chars] ***"
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.002s
+Ran 1 test in 0.003s
 
 FAILED (failures=1)
